@@ -1,7 +1,9 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [Range(0.0f, 100.0f)]
     [SerializeField]
     private float speed = 5.0f;
 
@@ -10,7 +12,6 @@ public class PlayerMovement : MonoBehaviour
     private Collider2D colli;
 
     Vector2 movement;
-    private Camera PlayerCamera;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -19,12 +20,14 @@ public class PlayerMovement : MonoBehaviour
         colli = GetComponent<Collider2D>();
     }
 
+    public void Move(InputAction.CallbackContext context)
+    {
+        movement = context.ReadValue<Vector2>();
+    }
+
     // Update is called once per frame
     void Update()
     {
-        movement.x = Input.GetAxisRaw("Horizontal");
-        movement.y = Input.GetAxisRaw("Vertical");
-
         animator.SetFloat("Horizontal", movement.x);
         animator.SetFloat("Vertical", movement.y);
         animator.SetFloat("Speed", movement.sqrMagnitude);
@@ -32,6 +35,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rigidBody.MovePosition(rigidBody.position + movement.normalized * speed * Time.fixedDeltaTime);
+        rigidBody.MovePosition(rigidBody.position + speed * Time.fixedDeltaTime * movement.normalized);
     }
 }

@@ -79,6 +79,16 @@
       "source": "registry",
       "testable": false
     },
+    "com.unity.cinemachine@3.1.5": {
+      "name": "com.unity.cinemachine",
+      "displayName": "Cinemachine",
+      "resolvedPath": "C:\\Users\\ngyao\\OneDrive\\Desktop\\FYP\\Consentia\\src\\Library\\PackageCache\\com.unity.cinemachine@5342685532bb",
+      "fingerprint": "5342685532bbf7fa5b3a314c0b7ddba04ff17eff",
+      "editorCompatibility": "2022.3.0a1",
+      "version": "3.1.5",
+      "source": "registry",
+      "testable": false
+    },
     "com.unity.collab-proxy@2.10.0": {
       "name": "com.unity.collab-proxy",
       "displayName": "Unity Version Control",
@@ -491,6 +501,16 @@
       "source": "builtin",
       "testable": false
     },
+    "com.unity.splines@2.8.2": {
+      "name": "com.unity.splines",
+      "displayName": "Splines",
+      "resolvedPath": "C:\\Users\\ngyao\\OneDrive\\Desktop\\FYP\\Consentia\\src\\Library\\PackageCache\\com.unity.splines@1cb7d86fc7ff",
+      "fingerprint": "1cb7d86fc7ffee63824ca302b2b8982178eeea83",
+      "editorCompatibility": "2022.3.0a1",
+      "version": "2.8.2",
+      "source": "registry",
+      "testable": false
+    },
     "com.unity.2d.common@11.0.1": {
       "name": "com.unity.2d.common",
       "displayName": "2D Common",
@@ -549,6 +569,16 @@
       "editorCompatibility": "2023.3.0b1",
       "version": "1.0.1",
       "source": "builtin",
+      "testable": false
+    },
+    "com.unity.settings-manager@2.1.0": {
+      "name": "com.unity.settings-manager",
+      "displayName": "Settings Manager",
+      "resolvedPath": "C:\\Users\\ngyao\\OneDrive\\Desktop\\FYP\\Consentia\\src\\Library\\PackageCache\\com.unity.settings-manager@41738c275190",
+      "fingerprint": "41738c27519039c335849eb78949382f4d7a3544",
+      "editorCompatibility": "2022.3.0a1",
+      "version": "2.1.0",
+      "source": "registry",
       "testable": false
     },
     "com.unity.nuget.mono-cecil@1.11.5": {
