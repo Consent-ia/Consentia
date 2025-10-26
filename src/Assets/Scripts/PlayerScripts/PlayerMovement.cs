@@ -11,11 +11,6 @@ public class PlayerMovement : MonoBehaviour
 
     Vector2 movement;
     private Camera PlayerCamera;
-
-    public Camera GetPlayerCamera()
-    {
-        return PlayerCamera;
-    }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
