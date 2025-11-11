@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rigidBody;
     private Animator animator;
 
-    Vector2 movement;
+    public Vector2 movement { get; set; }
 
     void Start()
     {
@@ -30,7 +30,7 @@ public class PlayerMovement : MonoBehaviour
             animator.SetFloat("Horizontal", movement.x);
             animator.SetFloat("Vertical", movement.y);
         }
-        animator.SetBool("isMoving", movement.sqrMagnitude > 0);
+        animator.SetFloat("Speed", movement.sqrMagnitude);
     }
 
     private void FixedUpdate()

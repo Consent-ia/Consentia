@@ -12,10 +12,13 @@ public class PlayerInteract : MonoBehaviour
 
     private Animator animator;
     private Vector2 lastMovementDirection = Vector2.down;
+    private PlayerMovement playerMovement;
+    private bool isInteractingWithNPC = false;
 
     void Start()
     {
         animator = GetComponent<Animator>();
+        playerMovement = GetComponent<PlayerMovement>();
     }
 
     public void Interact(InputAction.CallbackContext context)
@@ -23,6 +26,15 @@ public class PlayerInteract : MonoBehaviour
         if (context.performed)
         {
             Debug.Log("Interact pressed");
+
+            // If already interacting with an NPC, advance dialog
+            if (isInteractingWithNPC && DialogManager.Instance != null && DialogManager.Instance.IsDialogActive())
+            {
+                DialogManager.Instance.DisplayNextLine();
+                return;
+            }
+
+            // Otherwise, try to interact with a new NPC
             TryInteractWithNPC();
         }
     }
@@ -35,6 +47,12 @@ public class PlayerInteract : MonoBehaviour
         if (horizontal != 0 || vertical != 0)
         {
             lastMovementDirection = new Vector2(horizontal, vertical).normalized;
+        }
+
+        // Check if dialog has ended
+        if (isInteractingWithNPC && DialogManager.Instance != null && !DialogManager.Instance.IsDialogActive())
+        {
+            EndInteraction();
         }
     }
 
@@ -49,17 +67,39 @@ public class PlayerInteract : MonoBehaviour
 
         if (hit.collider != null)
         {
-            // Check if the hit object has an NPC component or interface
             INPC npc = hit.collider.GetComponent<INPC>();
             if (npc != null)
             {
                 npc.Interact();
+                StartInteraction();
                 Debug.Log($"Interacting with {hit.collider.name}");
             }
         }
         else
         {
             Debug.Log("No NPC in range");
+        }
+    }
+
+    private void StartInteraction()
+    {
+        isInteractingWithNPC = true;
+
+        if (playerMovement != null)
+        {
+            playerMovement.enabled = false;
+            playerMovement.movement = Vector2.zero;
+            animator.SetFloat("Speed", 0);
+        }
+    }
+
+    private void EndInteraction()
+    {
+        isInteractingWithNPC = false;
+
+        if (playerMovement != null)
+        {
+            playerMovement.enabled = true;
         }
     }
 
