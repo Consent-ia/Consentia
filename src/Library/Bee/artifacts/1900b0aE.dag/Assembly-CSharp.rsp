@@ -458,7 +458,6 @@
 -analyzer:"C:/Program Files/Unity/Hub/Editor/6000.2.9f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"C:/Program Files/Unity/Hub/Editor/6000.2.9f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 -analyzer:"C:/Program Files/Unity/Hub/Editor/6000.2.9f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll"
-"Assets/Scripts/DialogueSystem/DialogueManager.cs"
 "Assets/Scripts/NPCScripts/INPC.cs"
 "Assets/Scripts/NPCScripts/NPCController.cs"
 "Assets/Scripts/PlayerScripts/PlayerInteract.cs"
