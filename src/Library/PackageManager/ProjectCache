@@ -178,17 +178,22 @@ m_ResolvedPackages:
     - 10.1.4
     - 10.2.0
     - 10.2.1
+    - 10.2.2
     - 11.0.0
     - 12.0.0
     - 12.0.1
     - 12.0.2
+    - 12.0.3
     - 13.0.0
     - 13.0.1
+    - 13.0.2
     - 14.0.0
     - 14.0.1
+    - 14.0.2
     compatible:
     - 12.0.2
-    recommended: 12.0.2
+    - 12.0.3
+    recommended: 12.0.3
     deprecated: []
   dependencies:
   - name: com.unity.2d.common
@@ -548,12 +553,15 @@ m_ResolvedPackages:
     - 10.1.1
     - 11.0.0
     - 11.0.1
+    - 11.0.2
     - 12.0.0
+    - 12.0.1
     - 13.0.0
     - 13.0.1
     compatible:
     - 11.0.1
-    recommended: 11.0.1
+    - 11.0.2
+    recommended: 11.0.2
     deprecated: []
   dependencies:
   - name: com.unity.2d.common
@@ -844,11 +852,13 @@ m_ResolvedPackages:
     - 11.0.0
     - 12.0.0
     - 12.0.1
+    - 12.0.2
     - 13.0.0
     - 14.0.0
     compatible:
     - 12.0.1
-    recommended: 12.0.1
+    - 12.0.2
+    recommended: 12.0.2
     deprecated: []
   dependencies:
   - name: com.unity.2d.common
@@ -1115,12 +1125,16 @@ m_ResolvedPackages:
     - 4.3.1
     - 5.0.0
     - 5.0.1
+    - 5.0.2
     - 6.0.0
     - 6.0.1
+    - 7.0.0-exp.1
     - 7.0.0
+    - 8.0.0-exp.1
     compatible:
     - 5.0.1
-    recommended: 5.0.1
+    - 5.0.2
+    recommended: 5.0.2
     deprecated: []
   dependencies:
   - name: com.unity.2d.tilemap
@@ -1539,10 +1553,12 @@ m_ResolvedPackages:
     - 2.10.0
     - 2.10.1
     - 2.10.2
+    - 2.11.2
     compatible:
     - 2.10.0
     - 2.10.1
     - 2.10.2
+    - 2.11.2
     recommended: 2.10.2
     deprecated: []
   dependencies: []
@@ -1804,9 +1820,11 @@ m_ResolvedPackages:
     - 2.0.22
     - 2.0.23
     - 2.0.25
+    - 2.0.26
     compatible:
     - 2.0.25
-    recommended: 2.0.25
+    - 2.0.26
+    recommended: 2.0.26
     deprecated: []
   dependencies:
   - name: com.unity.test-framework
@@ -1950,10 +1968,14 @@ m_ResolvedPackages:
     - 1.14.2
     - 1.15.0
     - 1.16.0
+    - 1.17.0
+    - 1.18.0
     compatible:
     - 1.14.2
     - 1.15.0
     - 1.16.0
+    - 1.17.0
+    - 1.18.0
     recommended: 1.14.2
     deprecated: []
   dependencies:
@@ -2455,9 +2477,11 @@ m_ResolvedPackages:
     - 1.8.7
     - 1.8.8
     - 1.8.9
+    - 1.8.10
     compatible:
     - 1.8.9
-    recommended: 1.8.9
+    - 1.8.10
+    recommended: 1.8.10
     deprecated: []
   dependencies:
   - name: com.unity.modules.audio
@@ -6175,6 +6199,7 @@ m_ResolvedPackages:
     - 12.0.0
     - 12.0.1
     - 13.0.0
+    - 13.0.1
     compatible:
     - 11.0.1
     recommended: 11.0.1
@@ -6462,10 +6487,12 @@ m_ResolvedPackages:
     - 2.6.0-pre.4
     - 2.6.2
     - 2.6.3
+    - 2.6.4
     compatible:
     - 2.6.2
     - 2.6.3
-    recommended: 2.6.3
+    - 2.6.4
+    recommended: 2.6.4
     deprecated: []
   dependencies:
   - name: com.unity.burst
@@ -6808,9 +6835,13 @@ m_ResolvedPackages:
     - 1.8.23
     - 1.8.24
     - 1.8.25
+    - 1.8.26
+    - 1.8.27
     compatible:
     - 1.8.25
-    recommended: 1.8.25
+    - 1.8.26
+    - 1.8.27
+    recommended: 1.8.27
     deprecated: []
   dependencies:
   - name: com.unity.mathematics
