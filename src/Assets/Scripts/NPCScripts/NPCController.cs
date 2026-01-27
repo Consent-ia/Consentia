@@ -3,17 +3,7 @@ using UnityEngine;
 public class NPCController : MonoBehaviour, INPC
 {
     [SerializeField]
-    private string npcName = "NPC";
-    
-    [SerializeField]
-    private DialogLine[] dialogLines = new DialogLine[]
-    {
-        new DialogLine("Hello, traveler!"),
-        new DialogLine("Welcome to our village."),
-        new DialogLine("Is there anything I can help you with?")
-    };
-    
-    private int currentDialogIndex = 0;
+    private NPCDialog npcDialog;
     private Animator animator;
     private Transform playerTransform;
 
@@ -30,13 +20,13 @@ public class NPCController : MonoBehaviour, INPC
 
     public void Interact()
     {
-        if (dialogLines.Length > 0 && DialogManager.Instance != null)
+        if (npcDialog.DialogLines.Length > 0 && DialogManager.Instance != null)
         {
-            Debug.Log($"{npcName}: Starting dialog");
+            Debug.Log($"{npcDialog.NPCName}: Starting dialog");
 
             FacePlayer();
 
-            DialogManager.Instance.StartDialog(npcName, dialogLines);
+            DialogManager.Instance.StartDialog(npcDialog.NPCName, npcDialog.DialogLines);
         }
     }
 

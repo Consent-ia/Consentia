@@ -1055,17 +1055,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5232bd8fccb86a43a52b193b9b454ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCController
-  npcName: Merchant
-  dialogLines:
-  - text: Hello, traveler!
-    isQuestion: 0
-    choices: []
-  - text: Welcome to our village.
-    isQuestion: 0
-    choices: []
-  - text: Is there anything I can help you with?
-    isQuestion: 0
-    choices: []
+  npcDialog: {fileID: 11400000, guid: 89ac40d5334068d43889705d677fde41, type: 2}
 --- !u!95 &912957726
 Animator:
   serializedVersion: 7
@@ -1258,17 +1248,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5232bd8fccb86a43a52b193b9b454ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCController
-  npcName: Mira
-  dialogLines:
-  - text: Hello, traveler!
-    isQuestion: 0
-    choices: []
-  - text: Welcome to our village.
-    isQuestion: 0
-    choices: []
-  - text: Is there anything I can help you with?
-    isQuestion: 0
-    choices: []
+  npcDialog: {fileID: 11400000, guid: 38d789d764a8cfe4c8e9e51c18cf6507, type: 2}
 --- !u!95 &1115159137
 Animator:
   serializedVersion: 7
@@ -1533,7 +1513,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1160594673
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1682,7 +1662,6 @@ GameObject:
   - component: {fileID: 1179070526}
   - component: {fileID: 1179070520}
   - component: {fileID: 1179070525}
-  - component: {fileID: 1179070527}
   m_Layer: 8
   m_Name: Dweller
   m_TagString: NPC
@@ -1819,22 +1798,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1179070518}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b5232bd8fccb86a43a52b193b9b454ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCController
-  npcName: Dweller
-  dialogLines:
-  - text: Hello, traveler!
-    isQuestion: 0
-    choices: []
-  - text: Welcome to our village.
-    isQuestion: 0
-    choices: []
-  - text: Is there anything I can help you with?
-    isQuestion: 0
-    choices: []
+  npcDialog: {fileID: 11400000, guid: a710849aeab474a4090a90620112cbd2, type: 2}
 --- !u!70 &1179070526
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -1872,18 +1841,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0.002710724, y: -0.0795259}
   m_Size: {x: 0.42952156, y: 0.42952165}
   m_Direction: 0
---- !u!114 &1179070527
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1179070518}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f079094a077474040aec5ed17e87f710, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DwellerDialogSetup
 --- !u!1 &1233131544
 GameObject:
   m_ObjectHideFlags: 0
@@ -17420,7 +17377,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1997377488
 RectTransform:
   m_ObjectHideFlags: 0

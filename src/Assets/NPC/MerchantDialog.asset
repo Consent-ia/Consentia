@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75e7bea227aaf2b499307efe1ddc0480, type: 3}
+  m_Name: MerchantDialog
+  m_EditorClassIdentifier: Assembly-CSharp::NPCDialog
+  NPCName: Merchant
+  DialogLines:
+  - text: Hello there!
+    isQuestion: 0
+    choices: []
+  - text: I'm the merchant!
+    isQuestion: 0
+    choices: []
+  - text: Do you have anything you are looking for?
+    isQuestion: 1
+    choices:
+    - choiceText: Yes!
+      nextDialogIndex: 3
+    - choiceText: Not Really....
+      nextDialogIndex: 4
+  - text: Great! What would you like to buy?
+    isQuestion: 0
+    choices: []
+  - text: Alright! Feel free to come around anytime!
+    isQuestion: 0
+    choices: []
