@@ -27,6 +27,13 @@ public class PlayerInteract : MonoBehaviour
         {
             Debug.Log("Interact pressed");
 
+            // If waiting for choice selection, handle it
+            if (DialogManager.Instance != null && DialogManager.Instance.IsWaitingForChoice())
+            {
+                DialogManager.Instance.SelectChoice();
+                return;
+            }
+
             // If already interacting with an NPC, advance dialog
             if (isInteractingWithNPC && DialogManager.Instance != null && DialogManager.Instance.IsDialogActive())
             {

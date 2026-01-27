@@ -6,11 +6,11 @@ public class NPCController : MonoBehaviour, INPC
     private string npcName = "NPC";
     
     [SerializeField]
-    private string[] dialogLines = new string[]
+    private DialogLine[] dialogLines = new DialogLine[]
     {
-        "Hello, traveler!",
-        "Welcome to our village.",
-        "Is there anything I can help you with?"
+        new DialogLine("Hello, traveler!"),
+        new DialogLine("Welcome to our village."),
+        new DialogLine("Is there anything I can help you with?")
     };
     
     private int currentDialogIndex = 0;
@@ -30,17 +30,14 @@ public class NPCController : MonoBehaviour, INPC
 
     public void Interact()
     {
-        // Display dialog or trigger NPC behavior
         if (dialogLines.Length > 0 && DialogManager.Instance != null)
         {
-            Debug.Log($"{npcName}: {dialogLines[currentDialogIndex]}");
+            Debug.Log($"{npcName}: Starting dialog");
 
             FacePlayer();
 
             DialogManager.Instance.StartDialog(npcName, dialogLines);
         }
-        
-        // Add your dialog system or NPC interaction logic here
     }
 
     private void FacePlayer()
