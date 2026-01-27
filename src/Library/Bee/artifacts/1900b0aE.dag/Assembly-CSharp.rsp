@@ -463,6 +463,8 @@
 "Assets/Scripts/NPCScripts/NPCDialog.cs"
 "Assets/Scripts/PlayerScripts/PlayerInteract.cs"
 "Assets/Scripts/PlayerScripts/PlayerMovement.cs"
+"Assets/Scripts/SaveSystem/DialogChoiceData.cs"
+"Assets/Scripts/SaveSystem/SaveSystem.cs"
 "Assets/Scripts/UIScripts/DialogChoice.cs"
 "Assets/Scripts/UIScripts/DialogLine.cs"
 "Assets/Scripts/UIScripts/DialogManager.cs"

@@ -1,0 +1,121 @@
+using System.IO;
+using UnityEngine;
+
+public class SaveSystem : MonoBehaviour
+{
+    public static SaveSystem Instance { get; private set; }
+    
+    private string saveFilePath;
+    private PlayerChoicesSaveData saveData;
+    
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+        
+        // Set save file path
+        saveFilePath = Path.Combine(Application.persistentDataPath, "playerChoices.json");
+        
+        // Load existing data or create new
+        LoadData();
+    }
+    
+    public void SaveChoice(string npcName, string questionText, string selectedChoice, int choiceIndex)
+    {
+        DialogChoiceData choiceData = new DialogChoiceData(npcName, questionText, selectedChoice, choiceIndex);
+        saveData.choices.Add(choiceData);
+        
+        SaveData();
+        
+        Debug.Log($"Saved choice: {selectedChoice} for NPC: {npcName}");
+    }
+    
+    private void SaveData()
+    {
+        try
+        {
+            string json = JsonUtility.ToJson(saveData, true);
+            File.WriteAllText(saveFilePath, json);
+            Debug.Log($"Data saved to: {saveFilePath}");
+        }
+        catch (System.Exception e)
+        {
+            Debug.LogError($"Failed to save data: {e.Message}");
+        }
+    }
+    
+    private void LoadData()
+    {
+        if (File.Exists(saveFilePath))
+        {
+            try
+            {
+                string json = File.ReadAllText(saveFilePath);
+                saveData = JsonUtility.FromJson<PlayerChoicesSaveData>(json);
+                Debug.Log($"Data loaded from: {saveFilePath}");
+            }
+            catch (System.Exception e)
+            {
+                Debug.LogError($"Failed to load data: {e.Message}");
+                saveData = new PlayerChoicesSaveData();
+            }
+        }
+        else
+        {
+            saveData = new PlayerChoicesSaveData();
+            Debug.Log("No save file found. Creating new save data.");
+        }
+    }
+    
+    public PlayerChoicesSaveData GetSaveData()
+    {
+        return saveData;
+    }
+    
+    public DialogChoiceData GetLastChoiceForNPC(string npcName)
+    {
+        for (int i = saveData.choices.Count - 1; i >= 0; i--)
+        {
+            if (saveData.choices[i].npcName == npcName)
+            {
+                return saveData.choices[i];
+            }
+        }
+        return null;
+    }
+    
+    public bool HasMadeChoice(string npcName, string questionText)
+    {
+        foreach (var choice in saveData.choices)
+        {
+            if (choice.npcName == npcName && choice.questionText == questionText)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+    
+    public void ClearAllChoices()
+    {
+        saveData.choices.Clear();
+        SaveData();
+        Debug.Log("All choices cleared.");
+    }
+    
+    public void DeleteSaveFile()
+    {
+        if (File.Exists(saveFilePath))
+        {
+            File.Delete(saveFilePath);
+            saveData = new PlayerChoicesSaveData();
+            Debug.Log("Save file deleted.");
+        }
+    }
+}

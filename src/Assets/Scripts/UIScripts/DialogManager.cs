@@ -238,6 +238,9 @@ public class DialogManager : MonoBehaviour
 
         Debug.Log($"Selected: {selectedChoice.choiceText}");
 
+        // Save the choice
+        SaveChoice(currentQuestion, selectedChoice);
+
         HideChoices();
 
         if (selectedChoice.nextDialogIndex >= 0 && selectedChoice.nextDialogIndex < currentDialogLines.Length)
@@ -251,6 +254,23 @@ public class DialogManager : MonoBehaviour
         else
         {
             EndDialog();
+        }
+    }
+
+    private void SaveChoice(DialogLine question, DialogChoice selectedChoice)
+    {
+        if (SaveSystem.Instance != null)
+        {
+            SaveSystem.Instance.SaveChoice(
+                currentNPCName, 
+                question.text, 
+                selectedChoice.choiceText, 
+                currentChoiceIndex
+            );
+        }
+        else
+        {
+            Debug.LogWarning("SaveSystem not found! Choice not saved.");
         }
     }
 

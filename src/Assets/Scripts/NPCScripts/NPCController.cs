@@ -4,6 +4,7 @@ public class NPCController : MonoBehaviour, INPC
 {
     [SerializeField]
     private NPCDialog npcDialog;
+
     private Animator animator;
     private Transform playerTransform;
 
