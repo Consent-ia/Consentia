@@ -3,12 +3,23 @@ using UnityEngine.InputSystem;
 
 public class MenuManager : MonoBehaviour
 {
+    public static MenuManager Instance { get; private set; }
+
     [Header("Menu Object")]
     [SerializeField]
     private GameObject mainMenu;
 
-    void Start()
+    void Awake()
     {
+        // Singleton pattern
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
         CloseMenu();
     }
 

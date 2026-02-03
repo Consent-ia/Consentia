@@ -3,6 +3,8 @@ using UnityEngine.UI;
 
 public class TabController : MonoBehaviour
 {
+    public static TabController Instance { get; private set; }
+
     [System.Serializable]
     public class TabPage
     {
@@ -23,8 +25,22 @@ public class TabController : MonoBehaviour
 
     private TabPage currentActiveTab;
 
-    void Start()
+    [Header("Tab Click Sound")]
+    [SerializeField]
+    private AudioClip tabClickSound;
+
+    void Awake()
     {
+        // Singleton pattern
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+
         if (tabPages.Length > 0)
         {
             ActivateTab(tabPages[0]);
@@ -39,6 +55,7 @@ public class TabController : MonoBehaviour
         if (targetTab != null)
         {
             ActivateTab(targetTab);
+            PlayTabClickSound(); // Play sound when tab is activated
         }
         else
         {
@@ -52,6 +69,7 @@ public class TabController : MonoBehaviour
         if (index >= 0 && index < tabPages.Length)
         {
             ActivateTab(tabPages[index]);
+            PlayTabClickSound(); // Play sound when tab is activated
         }
         else
         {
@@ -72,6 +90,20 @@ public class TabController : MonoBehaviour
         targetTab.tabImage.color = defaultActiveColor;
         targetTab.pageObject.SetActive(true);
         currentActiveTab = targetTab;
+    }
+
+    public void OnTabClicked(int tabIndex)
+    {
+        ActivateTabByIndex(tabIndex);
+    }
+
+    private void PlayTabClickSound()
+    {
+        // Simply call PlaySFX with the clip - SoundManager handles the rest
+        if (SoundManager.Instance != null && tabClickSound != null)
+        {
+            SoundManager.Instance.PlaySFX(tabClickSound);
+        }
     }
 
     // Helper: Get current active page
