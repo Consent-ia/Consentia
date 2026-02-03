@@ -3,6 +3,7 @@ using UnityEngine.InputSystem;
 
 public class MenuManager : MonoBehaviour
 {
+    [Header("Menu Object")]
     [SerializeField]
     private GameObject mainMenu;
 
