@@ -23,20 +23,17 @@ public class MenuManager : MonoBehaviour
         CloseMenu();
     }
 
-    public void Menu(InputAction.CallbackContext context)
+    public void ToggleMenu()
     {
-        if (context.performed)
+        if (mainMenu.activeSelf)
         {
-            if (mainMenu.activeSelf)
-            {
-                CloseMenu();
-                Debug.Log("Closing Menu");
-            }
-            else
-            {
-                OpenMenu();
-                Debug.Log("Opening Menu");
-            }
+            CloseMenu();
+            Debug.Log("Closing Menu");
+        }
+        else
+        {
+            OpenMenu();
+            Debug.Log("Opening Menu");
         }
     }
 
@@ -50,10 +47,5 @@ public class MenuManager : MonoBehaviour
     {
         mainMenu.SetActive(true);
         Time.timeScale = 0f; // Pause the game
-    }
-
-    void Update()
-    {
-        
     }
 }
