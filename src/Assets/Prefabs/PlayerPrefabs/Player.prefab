@@ -285,8 +285,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.0023671866, y: -0.120923474}
-  m_Size: {x: 0.43281123, y: 0.51313794}
+  m_Offset: {x: 0.0017938734, y: -0.049803223}
+  m_Size: {x: 0.303251, y: 0.3135701}
   m_Direction: 0
 --- !u!95 &1094047101792471324
 Animator:
@@ -436,10 +436,6 @@ MonoBehaviour:
     m_ActionId: 9caa3d8a-6b2f-4e8e-8bad-6ede561bd9be
     m_ActionName: UI/TrackedDeviceOrientation
   - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 3a940cbe-5824-4e98-a2c9-c060e6af6473
-    m_ActionName: 'UI/Menu[/Keyboard/tab]'
-  - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 4453370554734900242}
         m_TargetAssemblyTypeName: PlayerMenu, Assembly-CSharp
@@ -455,6 +451,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 250a6d85-419f-478c-a598-5e1f7a1e3697
     m_ActionName: 'Player/Menu[/Keyboard/tab]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 882920681396618310}
+        m_TargetAssemblyTypeName: PlayerInteract, Assembly-CSharp
+        m_MethodName: Navigate
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 327d3b72-5c35-4baf-8312-51b4349f7e9b
+    m_ActionName: 'Player/Navigate[/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player

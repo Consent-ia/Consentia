@@ -27,7 +27,7 @@ public class PlayerInteract : MonoBehaviour
         {
             Debug.Log("Interact pressed");
 
-            // If waiting for choice selection, handle it
+            // If waiting for choice selection, confirm the choice
             if (DialogManager.Instance != null && DialogManager.Instance.IsWaitingForChoice())
             {
                 DialogManager.Instance.SelectChoice();
@@ -43,6 +43,16 @@ public class PlayerInteract : MonoBehaviour
 
             // Otherwise, try to interact with a new NPC
             TryInteractWithNPC();
+        }
+    }
+
+    // Bind this to your Navigate action in the Input Action Asset
+    public void Navigate(InputAction.CallbackContext context)
+    {
+        if (context.performed && DialogManager.Instance != null && DialogManager.Instance.IsWaitingForChoice())
+        {
+            Vector2 direction = context.ReadValue<Vector2>();
+            DialogManager.Instance.NavigateChoices(direction);
         }
     }
 

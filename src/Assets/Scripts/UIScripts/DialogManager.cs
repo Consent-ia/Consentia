@@ -57,14 +57,6 @@ public class DialogManager : MonoBehaviour
         choiceBox.SetActive(false);
     }
 
-    private void Update()
-    {
-        if (isWaitingForChoice)
-        {
-            HandleChoiceNavigation();
-        }
-    }
-
     public void StartDialog(string npcName, DialogLine[] dialogLines)
     {
         currentNPCName = npcName;
@@ -176,6 +168,31 @@ public class DialogManager : MonoBehaviour
         }
     }
 
+    // Called from PlayerInteract via new Input System
+    public void NavigateChoices(Vector2 direction)
+    {
+        if (!isWaitingForChoice)
+            return;
+
+        DialogLine currentQuestion = currentDialogLines[currentLineIndex - 1];
+        int maxChoices = currentQuestion.choices.Length;
+
+        if (direction.y > 0) // Up
+        {
+            currentChoiceIndex--;
+            if (currentChoiceIndex < 0)
+                currentChoiceIndex = maxChoices - 1;
+            UpdateSelectionArrow();
+        }
+        else if (direction.y < 0) // Down
+        {
+            currentChoiceIndex++;
+            if (currentChoiceIndex >= maxChoices)
+                currentChoiceIndex = 0;
+            UpdateSelectionArrow();
+        }
+    }
+
     private IEnumerator TypeDialogThenShowChoices(DialogLine questionLine)
     {
         yield return StartCoroutine(TypeDialog(questionLine.text));
@@ -205,27 +222,6 @@ public class DialogManager : MonoBehaviour
         }
 
         isTyping = false;
-    }
-
-    private void HandleChoiceNavigation()
-    {
-        DialogLine currentQuestion = currentDialogLines[currentLineIndex - 1];
-        int maxChoices = currentQuestion.choices.Length;
-
-        if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
-        {
-            currentChoiceIndex--;
-            if (currentChoiceIndex < 0)
-                currentChoiceIndex = maxChoices - 1;
-            UpdateSelectionArrow();
-        }
-        else if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S))
-        {
-            currentChoiceIndex++;
-            if (currentChoiceIndex >= maxChoices)
-                currentChoiceIndex = 0;
-            UpdateSelectionArrow();
-        }
     }
 
     public void SelectChoice()
