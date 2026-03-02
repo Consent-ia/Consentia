@@ -49,11 +49,11 @@ TagManager:
   - name: Foreground
     uniqueID: 2358280457
     locked: 0
-  - name: Player
-    uniqueID: 4080874311
+  - name: PassThru
+    uniqueID: 1424857707
     locked: 0
   m_RenderingLayers:
   - Default
   - Background
   - Foreground
-  - Player
+  - PassThru
