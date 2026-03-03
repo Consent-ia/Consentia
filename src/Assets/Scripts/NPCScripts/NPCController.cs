@@ -11,12 +11,6 @@ public class NPCController : MonoBehaviour, INPC
     void Start()
     {
         animator = GetComponent<Animator>();
-
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
-        if (player != null)
-        {
-            playerTransform = player.transform;
-        }
     }
 
     public void Interact()
@@ -48,5 +42,10 @@ public class NPCController : MonoBehaviour, INPC
             animator.SetFloat("Horizontal", 0);
             animator.SetFloat("Vertical", direction.y);
         }
+    }
+
+    public void SetPlayerTransform(Transform player)
+    {
+        playerTransform = player;
     }
 }

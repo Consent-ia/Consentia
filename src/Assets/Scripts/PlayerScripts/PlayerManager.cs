@@ -41,7 +41,19 @@ public class PlayerManager : MonoBehaviour
     public void SpawnPlayer()
     {
         currentPlayer = Instantiate(characters[PlayerPrefs.GetInt("SpawnInd")], position, Quaternion.identity);
+        SetupNPCPlayerReferences();
         DontDestroyOnLoad(currentPlayer);
+    }
+
+    private void SetupNPCPlayerReferences()
+    {
+        NPCController[] npcs = FindObjectsByType<NPCController>(FindObjectsSortMode.None);
+        Debug.Log($"Found {npcs.Length} NPCs in the scene.");
+        foreach (var npc in npcs)
+        {
+            Debug.Log($"Setting player transform for NPC: {npc.gameObject.name}");
+            npc.SetPlayerTransform(currentPlayer.transform);
+        }
     }
 
     public void SetPlayerPosition(string nextSceneName)
@@ -52,6 +64,7 @@ public class PlayerManager : MonoBehaviour
             "Act2" => act2PlayerPosition,
             _ => position
         };
+
         if (currentPlayer != null)
         {
             currentPlayer.transform.position = newPosition;
