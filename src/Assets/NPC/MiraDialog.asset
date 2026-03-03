@@ -14,22 +14,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialog
   NPCName: Mira
   DialogLines:
-  - text: Hello, traveller!
+  - text: "Oh\u2026 thank the stars. You\u2019re awake."
     isQuestion: 0
     choices: []
-  - text: My name is Mira!
+  - text: "A data storm hit the city last night. The Core couldn\u2019t hold."
     isQuestion: 0
     choices: []
-  - text: I'll be guiding you around Consentia from here onwards.
-    isQuestion: 1
-    choices:
-    - choiceText: okay.....
-      nextDialogIndex: 3
-    - choiceText: OH GREAT!
-      nextDialogIndex: 4
-  - text: you sound sus of me...
+  - text: "Everything we were\u2026 every choice you ever made\u2026 it\u2019s gone."
     isQuestion: 0
     choices: []
-  - text: WHATS THAT SUPPOSED TO MEAN?!?!
+  - text: ...
+    isQuestion: 0
+    choices: []
+  - text: The Reactor of Consentia has shattered.
+    isQuestion: 0
+    choices: []
+  - text: Without it, the town cannot remember who you are.
+    isQuestion: 0
+    choices: []
+  - text: "And if the town cannot remember you\u2026"
+    isQuestion: 0
+    choices: []
+  - text: "\u2026it cannot function."
+    isQuestion: 0
+    choices: []
+  - text: We must restore the Core.
+    isQuestion: 0
+    choices: []
+  - text: "But to do that\u2026 we must rebuild the foundations of your identity."
     isQuestion: 0
     choices: []
