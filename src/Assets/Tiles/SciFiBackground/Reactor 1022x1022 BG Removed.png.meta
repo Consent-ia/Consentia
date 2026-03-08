@@ -1,0 +1,1249 @@
+fileFormatVersion: 2
+guid: 5f447685dde6f73489d13e0f64da1eae
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2374777591328092940
+    second: Reactor 1022x1022 BG Removed_0
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 146
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Reactor 1022x1022 BG Removed_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 876
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c033baf13a7e4f020800000000000000
+      internalID: 2374777591328092940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor 1022x1022 BG Removed_1
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 876
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 461602018776ad84688ba5c494ee91a3
+      internalID: 684499963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor 1022x1022 BG Removed_2
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 876
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66eb5b53088cc714d919c5ff5e05b308
+      internalID: -287531862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor 1022x1022 BG Removed_3
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 876
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f92dcb0e5f3259b488dfcc50520c0d52
+      internalID: 11082059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor 1022x1022 BG Removed_4
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 876
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef92c826432165f4a9d7e6d55df8c2a0
+      internalID: -1662862939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor 1022x1022 BG Removed_5
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 876
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdafa54059ecbbc4b9f4cf052774cadb
+      internalID: 485943316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor 1022x1022 BG Removed_6
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 876
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d0bcb023a70e0342b76cdd929238ea3
+      internalID: -1792790565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor 1022x1022 BG Removed_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 730
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85d40f87148225c4bbbdff1057bb623f
+      internalID: -1047126733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor 1022x1022 BG Removed_8
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 730
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e51bc729b5c02104db1d797a1fabfe86
+      internalID: -1159208699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor 1022x1022 BG Removed_9
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 730
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ceff4b8d7d900445ae641020e7f65f7
+      internalID: -172331516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor 1022x1022 BG Removed_10
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 730
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c275ae53db73ca04d93d718ea03b7766
+      internalID: -1521506982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor 1022x1022 BG Removed_11
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 730
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3821b5f1da1286d4385b594c9cf69fd2
+      internalID: -1373502268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor 1022x1022 BG Removed_12
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 730
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f412676c1f811740bec2e32b0109e7e
+      internalID: -1378455462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor 1022x1022 BG Removed_13
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 730
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e4485776f3c3b44a94601415bf22c5c
+      internalID: 1555245775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor 1022x1022 BG Removed_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 584
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa8aec1fcee58f545846d1640a00e36b
+      internalID: -672536018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor 1022x1022 BG Removed_15
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 584
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4bebe0089e7a67459335157742a202b
+      internalID: 1236297386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor 1022x1022 BG Removed_16
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 584
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 649b7995f5648f24b92bfbfcf636c5e7
+      internalID: -2144179295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor 1022x1022 BG Removed_17
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 584
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a39fc59c06901746a5dda948ea6b3bf
+      internalID: -474976245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor 1022x1022 BG Removed_18
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 584
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abe5db225619d8c498ff79dfaa4a86de
+      internalID: -1575848688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor 1022x1022 BG Removed_19
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 584
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34fd7d39eb7c4924e87333e8db0a035e
+      internalID: 39271218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor 1022x1022 BG Removed_20
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 584
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26ade69c2c91e774b83ca1295f51a214
+      internalID: -699018174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor 1022x1022 BG Removed_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 438
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f6e191a561d7dd4eaf98f2a95e6c61a
+      internalID: -1342238707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor 1022x1022 BG Removed_22
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 438
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c5369515d028bc4faaf7717b3a5fc6e
+      internalID: 1677323070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor 1022x1022 BG Removed_23
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 438
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a5de5c516dd0c844906ba02aec02f4c
+      internalID: -415469842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor 1022x1022 BG Removed_24
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 438
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b111ca7c019ac2499f60c5522b7544c
+      internalID: -633630676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor 1022x1022 BG Removed_25
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 438
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da5008d7e5b5cf04485d18ea2481fa80
+      internalID: 69686433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor 1022x1022 BG Removed_26
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 438
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1a98d95bc565304297662fdbb092f2b
+      internalID: 1261790339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor 1022x1022 BG Removed_27
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 438
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f478bad57ba5cb74b84f3991bbbe1a3b
+      internalID: -483760040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor 1022x1022 BG Removed_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 292
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccb23d83a2c84324cb92f31a43afb671
+      internalID: 1794516078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor 1022x1022 BG Removed_29
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 292
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08aac802a0862eb488b91a9e41ef4cbc
+      internalID: 1595916566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor 1022x1022 BG Removed_30
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 292
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcf288d283bf609468ceb9880612b61b
+      internalID: 245660997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor 1022x1022 BG Removed_31
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 292
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e542e28bc09d8c49a498488091b838c
+      internalID: 1800856660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor 1022x1022 BG Removed_32
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 292
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8f849fa919446d44b7414dcf3d017fb
+      internalID: -1807417644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor 1022x1022 BG Removed_33
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 292
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a74b5c67604d10e42b07fa8cac46c0e7
+      internalID: -918438956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor 1022x1022 BG Removed_34
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 292
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3c3bc1f87791a64c9274e8507123821
+      internalID: 1479124935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor 1022x1022 BG Removed_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 146
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46190d79a9494a940b8f5e1c67776c69
+      internalID: -268298056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor 1022x1022 BG Removed_36
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 146
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59113efe435cc0641ad8eb519eb25a53
+      internalID: -1862347991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor 1022x1022 BG Removed_37
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 146
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebf446fab4139ee47b253eb9deca7e7b
+      internalID: 850034123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor 1022x1022 BG Removed_38
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 146
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 595a1ea8a43d9a34884247d21e4bb51f
+      internalID: -234281270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor 1022x1022 BG Removed_39
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 146
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15424d08020a8114dbdbc209f0f3839e
+      internalID: 179990107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor 1022x1022 BG Removed_40
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 146
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 201b3a39b8c748342bb46e7e103e5090
+      internalID: 844170274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor 1022x1022 BG Removed_41
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 146
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ebff42ff4394e74f9ec4faf493750ae
+      internalID: -415172512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor 1022x1022 BG Removed_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3efb1d0d39dcec489ae20522292a592
+      internalID: 962960510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor 1022x1022 BG Removed_43
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 0
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a02eabcfe959d634e8a2bcc46c9dacf0
+      internalID: -1507610948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor 1022x1022 BG Removed_44
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 0
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6df1eafceb669914787da2c904eeefee
+      internalID: 273903867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor 1022x1022 BG Removed_45
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 0
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f8ce4585617cb241aac4d326e4656c4
+      internalID: 521363079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor 1022x1022 BG Removed_46
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 0
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e9d39f9e10ad3640963121636e9b4fc
+      internalID: 850956809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor 1022x1022 BG Removed_47
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 0
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 472f09f284e823947a5bef2f55eee932
+      internalID: -1958476918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor 1022x1022 BG Removed_48
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 0
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3be4aaa37e3dbfe4f8345d33bef6ec44
+      internalID: -1468637096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 217384aca8c29b442bcedc43fa111c8e
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":7.0,"y":7.0},"gridSpriteSize":{"x":146.0,"y":146.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Reactor 1022x1022 BG Removed_0: 2374777591328092940
+      Reactor 1022x1022 BG Removed_1: 684499963
+      Reactor 1022x1022 BG Removed_10: -1521506982
+      Reactor 1022x1022 BG Removed_11: -1373502268
+      Reactor 1022x1022 BG Removed_12: -1378455462
+      Reactor 1022x1022 BG Removed_13: 1555245775
+      Reactor 1022x1022 BG Removed_14: -672536018
+      Reactor 1022x1022 BG Removed_15: 1236297386
+      Reactor 1022x1022 BG Removed_16: -2144179295
+      Reactor 1022x1022 BG Removed_17: -474976245
+      Reactor 1022x1022 BG Removed_18: -1575848688
+      Reactor 1022x1022 BG Removed_19: 39271218
+      Reactor 1022x1022 BG Removed_2: -287531862
+      Reactor 1022x1022 BG Removed_20: -699018174
+      Reactor 1022x1022 BG Removed_21: -1342238707
+      Reactor 1022x1022 BG Removed_22: 1677323070
+      Reactor 1022x1022 BG Removed_23: -415469842
+      Reactor 1022x1022 BG Removed_24: -633630676
+      Reactor 1022x1022 BG Removed_25: 69686433
+      Reactor 1022x1022 BG Removed_26: 1261790339
+      Reactor 1022x1022 BG Removed_27: -483760040
+      Reactor 1022x1022 BG Removed_28: 1794516078
+      Reactor 1022x1022 BG Removed_29: 1595916566
+      Reactor 1022x1022 BG Removed_3: 11082059
+      Reactor 1022x1022 BG Removed_30: 245660997
+      Reactor 1022x1022 BG Removed_31: 1800856660
+      Reactor 1022x1022 BG Removed_32: -1807417644
+      Reactor 1022x1022 BG Removed_33: -918438956
+      Reactor 1022x1022 BG Removed_34: 1479124935
+      Reactor 1022x1022 BG Removed_35: -268298056
+      Reactor 1022x1022 BG Removed_36: -1862347991
+      Reactor 1022x1022 BG Removed_37: 850034123
+      Reactor 1022x1022 BG Removed_38: -234281270
+      Reactor 1022x1022 BG Removed_39: 179990107
+      Reactor 1022x1022 BG Removed_4: -1662862939
+      Reactor 1022x1022 BG Removed_40: 844170274
+      Reactor 1022x1022 BG Removed_41: -415172512
+      Reactor 1022x1022 BG Removed_42: 962960510
+      Reactor 1022x1022 BG Removed_43: -1507610948
+      Reactor 1022x1022 BG Removed_44: 273903867
+      Reactor 1022x1022 BG Removed_45: 521363079
+      Reactor 1022x1022 BG Removed_46: 850956809
+      Reactor 1022x1022 BG Removed_47: -1958476918
+      Reactor 1022x1022 BG Removed_48: -1468637096
+      Reactor 1022x1022 BG Removed_5: 485943316
+      Reactor 1022x1022 BG Removed_6: -1792790565
+      Reactor 1022x1022 BG Removed_7: -1047126733
+      Reactor 1022x1022 BG Removed_8: -1159208699
+      Reactor 1022x1022 BG Removed_9: -172331516
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

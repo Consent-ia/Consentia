@@ -14,22 +14,46 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialog
   NPCName: Merchant
   DialogLines:
-  - text: Hello there!
+  - text: "Careful\u2026 the containment lattice is barely holding."
     isQuestion: 0
     choices: []
-  - text: I'm the merchant!
+  - text: When the data storm struck, the Core fractured into three primary shards.
     isQuestion: 0
     choices: []
-  - text: Do you have anything you are looking for?
-    isQuestion: 1
-    choices:
-    - choiceText: Yes!
-      nextDialogIndex: 3
-    - choiceText: Not Really....
-      nextDialogIndex: 4
-  - text: Great! What would you like to buy?
+  - text: Each shard now holds a different layer of your identity.
     isQuestion: 0
     choices: []
-  - text: Alright! Feel free to come around anytime!
+  - text: The reactor cannot repair itself until those fragments are recovered.
+    isQuestion: 0
+    choices: []
+  - text: The shards are scattered across three sectors of the city.
+    isQuestion: 0
+    choices: []
+  - text: The West Sector holds the Archives.
+    isQuestion: 0
+    choices: []
+  - text: The East Sector contains the Systems District.
+    isQuestion: 0
+    choices: []
+  - text: And the South Sector... it leads into the Deep Network.
+    isQuestion: 0
+    choices: []
+  - text: Recover the fragments from each sector and bring them back here.
+    isQuestion: 0
+    choices: []
+  - text: "Once the Core has all three pieces\u2026 it may be able to rebuild itself."
+    isQuestion: 0
+    choices: []
+  - text: "But something about the fracture pattern is wrong\u2026 reactors don't
+      just fail like this."
+    isQuestion: 0
+    choices: []
+  - text: It is almost as if the system rejected something.
+    isQuestion: 0
+    choices: []
+  - text: Go now. Choose a sector and recover the first shard.
+    isQuestion: 0
+    choices: []
+  - text: The Core will respond when you return.
     isQuestion: 0
     choices: []
