@@ -149,7 +149,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 4424304427367534426, guid: 2bf2aff24f53c5c42942b1a0aa237571, type: 2}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 9e9b81cd4cd178a40b9440a7929c3aec, type: 3}
+  m_Resource: {fileID: 8300000, guid: ce76552c0cc8a4341bdd8dbae93992fb, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -397,9 +397,56 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   characters:
   - {fileID: 8801019720318869783, guid: cfd6561a4467c184e84344e64796f7db, type: 3}
-  position: {x: 0, y: 0}
+  position: {x: -5, y: 11}
   act1PlayerPosition: {x: 6, y: 7}
   act2PlayerPosition: {x: -6, y: -7}
+--- !u!1 &4271052045573288025
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4200158039540590563}
+  - component: {fileID: 7829478981833333717}
+  m_Layer: 0
+  m_Name: SceneTransitionManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4200158039540590563
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4271052045573288025}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 120920538986995907}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7829478981833333717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4271052045573288025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff9b816a3f657054888e8d09a1503032, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SceneTransitionManager
+  fadeImage: {fileID: 0}
+  fadeOutDuration: 0.2
+  fadeInDuration: 0.2
 --- !u!1 &4349310902814377716
 GameObject:
   m_ObjectHideFlags: 0
@@ -435,6 +482,7 @@ Transform:
   - {fileID: 5722690232435265553}
   - {fileID: 8098148152330318481}
   - {fileID: 1833260516204168204}
+  - {fileID: 4200158039540590563}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6456625955713432525

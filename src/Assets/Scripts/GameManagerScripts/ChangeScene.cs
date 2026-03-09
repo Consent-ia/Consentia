@@ -3,23 +3,26 @@ using UnityEngine.SceneManagement;
 
 public class ChangeScene : MonoBehaviour
 {
-    string nextSceneName = "Act1";
     public void Change()
     {
-        if (SceneManager.GetActiveScene().name == "Act1")
+        string currentScene = SceneManager.GetActiveScene().name;
+        string nextSceneName = currentScene switch
         {
-            nextSceneName = "Act2";
-        }
-        else if (SceneManager.GetActiveScene().name == "Act2")
-        {
-            nextSceneName = "Act1";
-        }
-        LoadScene();
-    }
+            "Act1" => "Act2",
+            "Act2" => "Act1",
+            _ => currentScene
+        };
 
-    private void LoadScene()
-    {
-        SceneManager.LoadScene(nextSceneName, LoadSceneMode.Single);
-        PlayerManager.Instance.SetPlayerPosition(nextSceneName);
+        if (SceneTransitionManager.Instance != null)
+        {
+            SceneTransitionManager.Instance.TransitionToScene(nextSceneName);
+        }
+        else
+        {
+            // Fallback if SceneTransitionManager is not found
+            Debug.LogWarning("SceneTransitionManager not found! Loading scene directly.");
+            SceneManager.LoadScene(nextSceneName, LoadSceneMode.Single);
+            PlayerManager.Instance.SetPlayerPosition(nextSceneName);
+        }
     }
 }

@@ -68,6 +68,7 @@ public class PlayerManager : MonoBehaviour
         if (currentPlayer != null)
         {
             currentPlayer.transform.position = newPosition;
+            SetupNPCPlayerReferences();
         }
     }
 }

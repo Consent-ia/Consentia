@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
 
     private Rigidbody2D rigidBody;
     private Animator animator;
+    private float speedMultiplier = 1f; // Modified by StairZone
 
     public Vector2 movement { get; set; }
 
@@ -35,6 +36,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rigidBody.MovePosition(rigidBody.position + speed * Time.fixedDeltaTime * movement.normalized);
+        rigidBody.MovePosition(rigidBody.position + speed * speedMultiplier * Time.fixedDeltaTime * movement.normalized);
+    }
+
+    public void SetSpeedMultiplier(float multiplier)
+    {
+        speedMultiplier = multiplier;
     }
 }
