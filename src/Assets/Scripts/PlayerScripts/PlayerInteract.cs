@@ -98,7 +98,7 @@ public class PlayerInteract : MonoBehaviour
         }
     }
 
-    private void StartInteraction()
+    public void StartInteraction()
     {
         isInteractingWithNPC = true;
 
