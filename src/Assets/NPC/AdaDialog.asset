@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75e7bea227aaf2b499307efe1ddc0480, type: 3}
+  m_Name: AdaDialog
+  m_EditorClassIdentifier: Assembly-CSharp::NPCDialog
+  NPCName: Ada
+  DialogLines:
+  - text: Chief, you might want to look at this.
+    isQuestion: 0
+    choices: []
+  - text: The storm corrupted several interface panels around the district.
+    isQuestion: 0
+    choices: []
+  - text: Text displays are defaulting to their smallest calibration.
+    isQuestion: 0
+    choices: []
+  - text: Not exactly friendly for anyone trying to read system prompts.
+    isQuestion: 0
+    choices: []
+  - text: I can recalibrate the panels to use larger, clearer text.
+    isQuestion: 0
+    choices: []
+  - text: If you want, I can also make the town remember that setting whenever you
+      return
+    isQuestion: 1
+    choices:
+    - choiceText: Yes. Keep the panels readable.
+      nextDialogIndex: 6
+    - choiceText: Adjust them for now.
+      nextDialogIndex: 7
+  - text: Calibration stored. The district will remember this preference.
+    isQuestion: 0
+    choices: []
+  - text: Temporary calibration applied. The system will reset later.
+    isQuestion: 0
+    choices: []

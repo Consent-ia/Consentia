@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75e7bea227aaf2b499307efe1ddc0480, type: 3}
+  m_Name: CartaDialog
+  m_EditorClassIdentifier: Assembly-CSharp::NPCDialog
+  NPCName: Carta
+  DialogLines:
+  - text: "Chief\u2026 good timing!"
+    isQuestion: 0
+    choices: []
+  - text: "The data storm wiped half of our district\u2019s inventory ledgers."
+    isQuestion: 0
+    choices: []
+  - text: "Shops can still trade, but they\u2019ve forgotten what travelers were
+      preparing to collect."
+    isQuestion: 0
+    choices: []
+  - text: "Some people had parts lists, supply slates\u2026 plans for what they wanted
+      to gather."
+    isQuestion: 0
+    choices: []
+  - text: "If you\u2019re rebuilding the town\u2019s systems, I can restore a feature
+      that remembers those lists between visits."
+    isQuestion: 0
+    choices: []
+  - text: It would let the markets recall what a traveler was collecting the last
+      time they were here.
+    isQuestion: 1
+    choices:
+    - choiceText: Restore that memory.
+      nextDialogIndex: 6
+    - choiceText: Leave it manual.
+      nextDialogIndex: 7
+  - text: "Understood. I\u2019ll reconnect the market ledgers to the town\u2019s
+      memory system."
+    isQuestion: 0
+    choices: []
+  - text: Fair enough. Some travelers prefer to keep their own records.
+    isQuestion: 0
+    choices: []
