@@ -14,15 +14,42 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialog
   NPCName: Arc Reactor
   DialogLines:
-  - text: I am the Arc Reactor.
+  - text: ...hummm...
     isQuestion: 0
     choices: []
-  - text: You have to save me....
+  - text: Signal detected.
     isQuestion: 0
     choices: []
-  - text: Otherwise Consentia is screwed!!
+  - text: You stand before the Arc Reactor of Consentia.
     isQuestion: 0
     choices: []
-  - text: Now, go on with your journey!
+  - text: "Core integrity\u2026 compromised."
+    isQuestion: 0
+    choices: []
+  - text: The data storm fractured my memory lattice.
+    isQuestion: 0
+    choices: []
+  - text: Three critical shards were displaced across the network.
+    isQuestion: 0
+    choices: []
+  - text: "Without them\u2026 the city cannot restore itself."
+    isQuestion: 0
+    choices: []
+  - text: "...processing\u2026"
+    isQuestion: 0
+    choices: []
+  - text: A gateway channel is still operational.
+    isQuestion: 0
+    choices: []
+  - text: I will route you to the nearest corrupted sector.
+    isQuestion: 0
+    choices: []
+  - text: "Recover the shard located there\u2026 and return it to me."
+    isQuestion: 0
+    choices: []
+  - text: Consentia depends on it.
+    isQuestion: 0
+    choices: []
+  - text: "Initializing gateway\u2026"
     isQuestion: 0
     choices: []
