@@ -853,6 +853,14 @@ PrefabInstance:
       propertyPath: 'persistentObjects.Array.data[2]'
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 2597621941285600596, guid: db97d2db83742a2478c41f0e2301fe89, type: 3}
+      propertyPath: act2PlayerPosition.x
+      value: -21
+      objectReference: {fileID: 0}
+    - target: {fileID: 2597621941285600596, guid: db97d2db83742a2478c41f0e2301fe89, type: 3}
+      propertyPath: act2PlayerPosition.y
+      value: -8
+      objectReference: {fileID: 0}
     - target: {fileID: 4349310902814377716, guid: db97d2db83742a2478c41f0e2301fe89, type: 3}
       propertyPath: m_Name
       value: Managers
