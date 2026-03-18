@@ -398,8 +398,8 @@ MonoBehaviour:
   characters:
   - {fileID: 8801019720318869783, guid: cfd6561a4467c184e84344e64796f7db, type: 3}
   position: {x: -5, y: 11}
-  act1PlayerPosition: {x: 6, y: 7}
-  act2PlayerPosition: {x: -6, y: -7}
+  act1PlayerPosition: {x: -5, y: 11}
+  act2PlayerPosition: {x: -21, y: -8}
 --- !u!1 &4271052045573288025
 GameObject:
   m_ObjectHideFlags: 0
@@ -535,8 +535,6 @@ MonoBehaviour:
   typeSpeed: 0.02
   choiceBox: {fileID: 0}
   choiceTexts:
-  - {fileID: 0}
-  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   selectionArrow: {fileID: 0}
