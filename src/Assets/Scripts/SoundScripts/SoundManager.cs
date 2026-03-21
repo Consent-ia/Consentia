@@ -44,7 +44,7 @@ public class SoundManager : MonoBehaviour
     private void Awake()
     {
         // Singleton pattern
-        if (Instance == null)
+        if (!Instance)
         {
             Instance = this;
         }
@@ -60,12 +60,12 @@ public class SoundManager : MonoBehaviour
         LoadVolumeSettings();
 
         // Setup slider listeners
-        if (musicSlider != null)
+        if (musicSlider)
         {
             musicSlider.onValueChanged.AddListener(SetMusicVolume);
         }
 
-        if (sfxSlider != null)
+        if (sfxSlider)
         {
             sfxSlider.onValueChanged.AddListener(SetSFXVolume);
         }
@@ -77,7 +77,7 @@ public class SoundManager : MonoBehaviour
         float musicVolume = PlayerPrefs.GetFloat(MUSIC_VOLUME_KEY, defaultMusicVolume);
         SetMusicVolume(musicVolume);
 
-        if (musicSlider != null)
+        if (musicSlider)
         {
             musicSlider.value = musicVolume;
         }
@@ -86,17 +86,17 @@ public class SoundManager : MonoBehaviour
         float sfxVolume = PlayerPrefs.GetFloat(SFX_VOLUME_KEY, defaultSFXVolume);
         SetSFXVolume(sfxVolume);
 
-        if (sfxSlider != null)
+        if (sfxSlider)
         {
             sfxSlider.value = sfxVolume;
         }
     }
 
-    public void SetMusicVolume(float volume)
+    private void SetMusicVolume(float volume)
     {
         volume = Mathf.Clamp01(volume);
 
-        if (audioMixer != null)
+        if (audioMixer)
         {
             // Convert linear volume (0-1) to decibels (-80 to 0)
             float db = volume > 0 ? Mathf.Log10(volume) * 20 : -80f;
@@ -107,11 +107,11 @@ public class SoundManager : MonoBehaviour
         PlayerPrefs.Save();
     }
 
-    public void SetSFXVolume(float volume)
+    private void SetSFXVolume(float volume)
     {
         volume = Mathf.Clamp01(volume);
 
-        if (audioMixer != null)
+        if (audioMixer)
         {
             // Convert linear volume (0-1) to decibels (-80 to 0)
             float db = volume > 0 ? Mathf.Log10(volume) * 20 : -80f;
@@ -125,17 +125,17 @@ public class SoundManager : MonoBehaviour
     // Play music using SoundManager's AudioSource
     public void PlayMusic(AudioClip clip, bool loop = true)
     {
-        if (musicSource != null && clip != null)
-        {
-            musicSource.clip = clip;
-            musicSource.loop = loop;
-            musicSource.Play();
-        }
+        if (!musicSource || !clip) 
+            return;
+        
+        musicSource.clip = clip;
+        musicSource.loop = loop;
+        musicSource.Play();
     }
 
     public void StopMusic()
     {
-        if (musicSource != null)
+        if (musicSource)
         {
             musicSource.Stop();
         }

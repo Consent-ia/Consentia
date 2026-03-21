@@ -21,7 +21,7 @@ public class SceneTransitionManager : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance == null)
+        if (!Instance)
         {
             Instance = this;
         }
@@ -43,6 +43,11 @@ public class SceneTransitionManager : MonoBehaviour
     public void TransitionToScene(string sceneName)
     {
         StartCoroutine(TransitionCoroutine(sceneName));
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        if (player)
+        {
+            player.GetComponent<PlayerMovement>().enabled = true;
+        }
     }
 
     private IEnumerator TransitionCoroutine(string sceneName)
@@ -66,9 +71,6 @@ public class SceneTransitionManager : MonoBehaviour
         // Wait one frame for scene to fully initialize
         yield return null;
 
-        // Set player position BEFORE camera updates
-        PlayerManager.Instance.SetPlayerPosition(sceneName);
-
         // Wait another frame to ensure position is applied
         yield return null;
 
@@ -78,7 +80,7 @@ public class SceneTransitionManager : MonoBehaviour
 
     private IEnumerator FadeOut()
     {
-        if (fadeImage == null)
+        if (!fadeImage)
             yield break;
 
         fadeImage.gameObject.SetActive(true);
@@ -100,7 +102,7 @@ public class SceneTransitionManager : MonoBehaviour
 
     private IEnumerator FadeIn()
     {
-        if (fadeImage == null)
+        if (!fadeImage)
             yield break;
 
         fadeImage.gameObject.SetActive(true);

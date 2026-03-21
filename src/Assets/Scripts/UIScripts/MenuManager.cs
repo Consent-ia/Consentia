@@ -8,10 +8,10 @@ public class MenuManager : MonoBehaviour
     [SerializeField]
     private GameObject mainMenu;
 
-    void Awake()
+    private void Awake()
     {
         // Singleton pattern
-        if (Instance == null)
+        if (!Instance)
         {
             Instance = this;
         }

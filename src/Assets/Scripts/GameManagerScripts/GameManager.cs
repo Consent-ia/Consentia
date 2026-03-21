@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager Instance { get; private set; }
+    private static GameManager Instance { get; set; }
 
     [SerializeField]
     private GameObject[] persistentObjects;
@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         // Singleton pattern
-        if (Instance == null)
+        if (!Instance)
         {
             Instance = this;
             MarkPersistentObjects();

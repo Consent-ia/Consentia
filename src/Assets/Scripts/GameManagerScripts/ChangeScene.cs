@@ -13,7 +13,7 @@ public class ChangeScene : MonoBehaviour
             _ => currentScene
         };
 
-        if (SceneTransitionManager.Instance != null)
+        if (SceneTransitionManager.Instance)
         {
             SceneTransitionManager.Instance.TransitionToScene(nextSceneName);
         }
@@ -22,7 +22,6 @@ public class ChangeScene : MonoBehaviour
             // Fallback if SceneTransitionManager is not found
             Debug.LogWarning("SceneTransitionManager not found! Loading scene directly.");
             SceneManager.LoadScene(nextSceneName, LoadSceneMode.Single);
-            PlayerManager.Instance.SetPlayerPosition(nextSceneName);
         }
     }
 }

@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class TabController : MonoBehaviour
 {
-    public static TabController Instance { get; private set; }
+    private static TabController Instance { get; set; }
 
     [System.Serializable]
     public class TabPage
@@ -29,10 +29,10 @@ public class TabController : MonoBehaviour
     [SerializeField]
     private AudioClip tabClickSound;
 
-    void Awake()
+    private void Awake()
     {
         // Singleton pattern
-        if (Instance == null)
+        if (!Instance)
         {
             Instance = this;
         }
@@ -100,7 +100,7 @@ public class TabController : MonoBehaviour
     private void PlayTabClickSound()
     {
         // Simply call PlaySFX with the clip - SoundManager handles the rest
-        if (SoundManager.Instance != null && tabClickSound != null)
+        if (SoundManager.Instance && tabClickSound)
         {
             SoundManager.Instance.PlaySFX(tabClickSound);
         }

@@ -3,6 +3,10 @@ using UnityEngine.InputSystem;
 
 public class PlayerInteract : MonoBehaviour
 {
+    private static readonly int Speed = Animator.StringToHash("Speed");
+    private static readonly int Horizontal = Animator.StringToHash("Horizontal");
+    private static readonly int Vertical = Animator.StringToHash("Vertical");
+
     [SerializeField]
     [Range(0.5f, 5f)]
     private float interactRange = 2f;
@@ -13,9 +17,9 @@ public class PlayerInteract : MonoBehaviour
     private Animator animator;
     private Vector2 lastMovementDirection = Vector2.down;
     private PlayerMovement playerMovement;
-    private bool isInteractingWithNPC = false;
+    private bool isInteractingWithNPC;
 
-    void Start()
+    private void Start()
     {
         animator = GetComponent<Animator>();
         playerMovement = GetComponent<PlayerMovement>();
@@ -23,43 +27,42 @@ public class PlayerInteract : MonoBehaviour
 
     public void Interact(InputAction.CallbackContext context)
     {
-        if (context.performed)
+        if (!context.performed) 
+            return;
+
+        // If waiting for choice selection, confirm the choice
+        if (DialogManager.Instance && DialogManager.Instance.IsWaitingForChoice())
         {
-            Debug.Log("Interact pressed");
-
-            // If waiting for choice selection, confirm the choice
-            if (DialogManager.Instance != null && DialogManager.Instance.IsWaitingForChoice())
-            {
-                DialogManager.Instance.SelectChoice();
-                return;
-            }
-
-            // If already interacting with an NPC, advance dialog
-            if (isInteractingWithNPC && DialogManager.Instance != null && DialogManager.Instance.IsDialogActive())
-            {
-                DialogManager.Instance.DisplayNextLine();
-                return;
-            }
-
-            // Otherwise, try to interact with a new NPC
-            TryInteractWithNPC();
+            DialogManager.Instance.SelectChoice();
+            return;
         }
+
+        // If already interacting with an NPC, advance dialog
+        if (isInteractingWithNPC && DialogManager.Instance && DialogManager.Instance.IsDialogActive())
+        {
+            DialogManager.Instance.DisplayNextLine();
+            return;
+        }
+
+        // Otherwise, try to interact with a new NPC
+        TryInteractWithNPC();
     }
 
     // Bind this to your Navigate action in the Input Action Asset
     public void Navigate(InputAction.CallbackContext context)
     {
-        if (context.performed && DialogManager.Instance != null && DialogManager.Instance.IsWaitingForChoice())
-        {
-            Vector2 direction = context.ReadValue<Vector2>();
-            DialogManager.Instance.NavigateChoices(direction);
-        }
+        if (!context.performed || !DialogManager.Instance ||
+            !DialogManager.Instance.IsWaitingForChoice())
+            return;
+        
+        Vector2 direction = context.ReadValue<Vector2>();
+        DialogManager.Instance.NavigateChoices(direction);
     }
 
-    void Update()
+    private void Update()
     {
-        float horizontal = animator.GetFloat("Horizontal");
-        float vertical = animator.GetFloat("Vertical");
+        float horizontal = animator.GetFloat(Horizontal);
+        float vertical = animator.GetFloat(Vertical);
 
         if (horizontal != 0 || vertical != 0)
         {
@@ -67,7 +70,7 @@ public class PlayerInteract : MonoBehaviour
         }
 
         // Check if dialog has ended
-        if (isInteractingWithNPC && DialogManager.Instance != null && !DialogManager.Instance.IsDialogActive())
+        if (isInteractingWithNPC && DialogManager.Instance && !DialogManager.Instance.IsDialogActive())
         {
             EndInteraction();
         }
@@ -82,39 +85,33 @@ public class PlayerInteract : MonoBehaviour
 
         RaycastHit2D hit = Physics2D.Raycast(rayOrigin, rayDirection, interactRange, npcLayer);
 
-        if (hit.collider != null)
-        {
-            INPC npc = hit.collider.GetComponent<INPC>();
-            if (npc != null)
-            {
-                npc.Interact();
-                StartInteraction();
-                Debug.Log($"Interacting with {hit.collider.name}");
-            }
-        }
-        else
-        {
-            Debug.Log("No NPC in range");
-        }
+        if (!hit.collider) 
+            return;
+        INPC npc = hit.collider.GetComponent<INPC>();
+        if (npc == null)
+            return;
+        npc.Interact();
+        StartInteraction();
+        Debug.Log($"Interacting with {hit.collider.name}");
     }
 
-    public void StartInteraction()
+    private void StartInteraction()
     {
         isInteractingWithNPC = true;
 
-        if (playerMovement != null)
-        {
-            playerMovement.enabled = false;
-            playerMovement.movement = Vector2.zero;
-            animator.SetFloat("Speed", 0);
-        }
+        if (!playerMovement)
+            return;
+        
+        playerMovement.enabled = false;
+        playerMovement.movement = Vector2.zero;
+        animator.SetFloat(Speed, 0);
     }
 
     private void EndInteraction()
     {
         isInteractingWithNPC = false;
 
-        if (playerMovement != null)
+        if (playerMovement)
         {
             playerMovement.enabled = true;
         }

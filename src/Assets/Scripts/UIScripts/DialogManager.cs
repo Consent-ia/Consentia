@@ -31,16 +31,16 @@ public class DialogManager : MonoBehaviour
 
     private DialogLine[] currentDialogLines;
     private string currentNPCName;
-    private int currentLineIndex = 0;
-    private bool isTyping = false;
-    private bool isWaitingForChoice = false;
-    private int currentChoiceIndex = 0;
+    private int currentLineIndex;
+    private bool isTyping;
+    private bool isWaitingForChoice;
+    private int currentChoiceIndex;
     private int currentlyTypingIndex = -1;
 
     private void Awake()
     {
         // Singleton pattern
-        if (Instance == null)
+        if (!Instance)
         {
             Instance = this;
         }
@@ -57,7 +57,7 @@ public class DialogManager : MonoBehaviour
         choiceBox.SetActive(false);
     }
 
-    public void StartDialog(string npcName, DialogLine[] dialogLines)
+    public void StartDialog(string npcName, DialogLine[] dialogLines, bool hasInteracted)
     {
         currentNPCName = npcName;
         currentDialogLines = dialogLines;
@@ -67,12 +67,17 @@ public class DialogManager : MonoBehaviour
         dialogBox.SetActive(true);
 
         // Display NPC name
-        if (npcNameText != null)
+        if (npcNameText)
         {
             npcNameText.text = currentNPCName;
         }
 
-        // Display first line
+        if (hasInteracted)
+        {
+            // If already interacted, skip to end of dialog
+            currentLineIndex = currentDialogLines.Length - 1;
+        }
+
         DisplayNextLine();
     }
 
@@ -96,7 +101,6 @@ public class DialogManager : MonoBehaviour
             if (currentLineIndex >= currentDialogLines.Length)
             {
                 // Don't end immediately - wait for next Interact press
-                return;
             }
             return;
         }
@@ -106,14 +110,9 @@ public class DialogManager : MonoBehaviour
             DialogLine currentLine = currentDialogLines[currentLineIndex];
             currentlyTypingIndex = currentLineIndex;
 
-            if (currentLine.isQuestion)
-            {
-                StartCoroutine(TypeDialogThenShowChoices(currentLine));
-            }
-            else
-            {
-                StartCoroutine(TypeDialog(currentLine.text));
-            }
+            StartCoroutine(currentLine.isQuestion
+                ? TypeDialogThenShowChoices(currentLine)
+                : TypeDialog(currentLine.text));
 
             currentLineIndex++;
         }
@@ -159,13 +158,13 @@ public class DialogManager : MonoBehaviour
 
     private void UpdateSelectionArrow()
     {
-        if (selectionArrow != null && choiceTexts.Length > 0)
-        {
-            RectTransform arrowRect = selectionArrow.GetComponent<RectTransform>();
-            RectTransform choiceRect = choiceTexts[currentChoiceIndex].GetComponent<RectTransform>();
+        if (!selectionArrow || choiceTexts.Length <= 0) 
+            return;
+        
+        RectTransform arrowRect = selectionArrow.GetComponent<RectTransform>();
+        RectTransform choiceRect = choiceTexts[currentChoiceIndex].GetComponent<RectTransform>();
             
-            arrowRect.anchoredPosition = new Vector2(arrowRect.anchoredPosition.x, choiceRect.anchoredPosition.y);
-        }
+        arrowRect.anchoredPosition = new Vector2(arrowRect.anchoredPosition.x, choiceRect.anchoredPosition.y);
     }
 
     // Called from PlayerInteract via new Input System
@@ -177,19 +176,26 @@ public class DialogManager : MonoBehaviour
         DialogLine currentQuestion = currentDialogLines[currentLineIndex - 1];
         int maxChoices = currentQuestion.choices.Length;
 
-        if (direction.y > 0) // Up
+        switch (direction.y)
         {
-            currentChoiceIndex--;
-            if (currentChoiceIndex < 0)
-                currentChoiceIndex = maxChoices - 1;
-            UpdateSelectionArrow();
-        }
-        else if (direction.y < 0) // Down
-        {
-            currentChoiceIndex++;
-            if (currentChoiceIndex >= maxChoices)
-                currentChoiceIndex = 0;
-            UpdateSelectionArrow();
+            // Up
+            case > 0:
+            {
+                currentChoiceIndex--;
+                if (currentChoiceIndex < 0)
+                    currentChoiceIndex = maxChoices - 1;
+                UpdateSelectionArrow();
+                break;
+            }
+            // Down
+            case < 0:
+            {
+                currentChoiceIndex++;
+                if (currentChoiceIndex >= maxChoices)
+                    currentChoiceIndex = 0;
+                UpdateSelectionArrow();
+                break;
+            }
         }
     }
 
@@ -199,7 +205,7 @@ public class DialogManager : MonoBehaviour
         ShowChoices(questionLine);
     }
 
-    public void EndDialog()
+    private void EndDialog()
     {
         dialogBox.SetActive(false);
         choiceBox.SetActive(false);
@@ -208,6 +214,7 @@ public class DialogManager : MonoBehaviour
         currentlyTypingIndex = -1;
         isTyping = false;
         isWaitingForChoice = false;
+        ProgressManager.Instance.AddNpc(currentNPCName);
     }
 
     private IEnumerator TypeDialog(string line)
@@ -215,7 +222,7 @@ public class DialogManager : MonoBehaviour
         isTyping = true;
         dialogText.text = "";
 
-        foreach (char letter in line.ToCharArray())
+        foreach (char letter in line)
         {
             dialogText.text += letter;
             yield return new WaitForSeconds(typeSpeed);
@@ -255,7 +262,7 @@ public class DialogManager : MonoBehaviour
 
     private void SaveChoice(DialogLine question, DialogChoice selectedChoice)
     {
-        if (SaveSystem.Instance != null)
+        if (SaveSystem.Instance)
         {
             SaveSystem.Instance.SaveChoice(
                 currentNPCName, 

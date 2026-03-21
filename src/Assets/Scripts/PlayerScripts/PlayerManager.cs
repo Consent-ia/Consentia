@@ -1,8 +1,9 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerManager : MonoBehaviour
 {
-    public static PlayerManager Instance { get; private set; }
+    private static PlayerManager Instance { get; set; }
 
     [Header("Player Characters")]
     [SerializeField]
@@ -23,7 +24,7 @@ public class PlayerManager : MonoBehaviour
     private void Awake()
     {
         // Singleton pattern
-        if (Instance == null)
+        if (!Instance)
         {
             Instance = this;
         }
@@ -33,30 +34,27 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
-    void Start()
+    private void Start()
     {
         SpawnPlayer();
     }
 
-    public void SpawnPlayer()
+    private void SpawnPlayer()
     {
         currentPlayer = Instantiate(characters[PlayerPrefs.GetInt("SpawnInd")], position, Quaternion.identity);
         SetupNPCPlayerReferences();
         DontDestroyOnLoad(currentPlayer);
     }
-
-    private void SetupNPCPlayerReferences()
+    
+    private void OnEnable()  => SceneManager.sceneLoaded += OnSceneLoaded;
+    private void OnDisable() => SceneManager.sceneLoaded -= OnSceneLoaded;
+    
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        NPCController[] npcs = FindObjectsByType<NPCController>(FindObjectsSortMode.None);
-        Debug.Log($"Found {npcs.Length} NPCs in the scene.");
-        foreach (var npc in npcs)
-        {
-            Debug.Log($"Setting player transform for NPC: {npc.gameObject.name}");
-            npc.SetPlayerTransform(currentPlayer.transform);
-        }
+        SetPlayerPosition(scene.name);
     }
 
-    public void SetPlayerPosition(string nextSceneName)
+    private void SetPlayerPosition(string nextSceneName)
     {
         Vector2 newPosition = nextSceneName switch
         {
@@ -65,10 +63,17 @@ public class PlayerManager : MonoBehaviour
             _ => position
         };
 
-        if (currentPlayer != null)
+        if (!currentPlayer) return;
+        currentPlayer.transform.position = newPosition;
+        SetupNPCPlayerReferences();
+    }
+
+    private void SetupNPCPlayerReferences()
+    {
+        NPCController[] npcs = FindObjectsByType<NPCController>(FindObjectsSortMode.None);
+        foreach (var npc in npcs)
         {
-            currentPlayer.transform.position = newPosition;
-            SetupNPCPlayerReferences();
+            npc.SetPlayerTransform(currentPlayer.transform);
         }
     }
 }

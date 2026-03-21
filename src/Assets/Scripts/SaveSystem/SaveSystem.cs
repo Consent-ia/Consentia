@@ -1,4 +1,5 @@
 using System.IO;
+using System.Linq;
 using UnityEngine;
 
 public class SaveSystem : MonoBehaviour
@@ -10,7 +11,7 @@ public class SaveSystem : MonoBehaviour
     
     private void Awake()
     {
-        if (Instance == null)
+        if (!Instance)
         {
             Instance = this;
         }
@@ -92,14 +93,7 @@ public class SaveSystem : MonoBehaviour
     
     public bool HasMadeChoice(string npcName, string questionText)
     {
-        foreach (var choice in saveData.choices)
-        {
-            if (choice.npcName == npcName && choice.questionText == questionText)
-            {
-                return true;
-            }
-        }
-        return false;
+        return saveData.choices.Any(choice => choice.npcName == npcName && choice.questionText == questionText);
     }
     
     public void ClearAllChoices()
@@ -111,11 +105,10 @@ public class SaveSystem : MonoBehaviour
     
     public void DeleteSaveFile()
     {
-        if (File.Exists(saveFilePath))
-        {
-            File.Delete(saveFilePath);
-            saveData = new PlayerChoicesSaveData();
-            Debug.Log("Save file deleted.");
-        }
+        if (!File.Exists(saveFilePath)) 
+            return;
+        File.Delete(saveFilePath);
+        saveData = new PlayerChoicesSaveData();
+        Debug.Log("Save file deleted.");
     }
 }

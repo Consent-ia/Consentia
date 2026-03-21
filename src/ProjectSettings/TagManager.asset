@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Background
   - NPC
+  - EA
+  - Portal
+  - CamPortal
   layers:
   - Default
   - TransparentFX

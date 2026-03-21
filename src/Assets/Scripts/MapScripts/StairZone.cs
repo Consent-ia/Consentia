@@ -18,7 +18,7 @@ public class StairZone : MonoBehaviour
     {
         PlayerMovement playerMovement = other.GetComponent<PlayerMovement>();
 
-        if (playerMovement != null)
+        if (playerMovement)
         {
             playerMovement.SetSpeedMultiplier(speedMultiplier);
         }
@@ -28,7 +28,7 @@ public class StairZone : MonoBehaviour
     {
         PlayerMovement playerMovement = other.GetComponent<PlayerMovement>();
 
-        if (playerMovement != null)
+        if (playerMovement)
         {
             playerMovement.SetSpeedMultiplier(1f); // Reset to normal speed
         }

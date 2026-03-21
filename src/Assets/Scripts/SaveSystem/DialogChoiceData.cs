@@ -23,5 +23,5 @@ public class DialogChoiceData
 [Serializable]
 public class PlayerChoicesSaveData
 {
-    public List<DialogChoiceData> choices = new List<DialogChoiceData>();
+    public List<DialogChoiceData> choices = new();
 }
