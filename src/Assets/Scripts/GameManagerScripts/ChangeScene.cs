@@ -9,7 +9,8 @@ public class ChangeScene : MonoBehaviour
         string nextSceneName = currentScene switch
         {
             "Act1" => "Act2",
-            "Act2" => "Act1",
+            "Act2" => "Act3",
+            "Act3" => "Act1",
             _ => currentScene
         };
 

@@ -44,15 +44,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f24ace20df43d2544ba457b4dd0d250a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  teleporterFocusPoint: {fileID: 0}
-  panToTeleporterSeconds: 2
-  holdOnTeleporterSeconds: 0.5
+  panToPortalSeconds: 1.2
+  holdOnPortalSeconds: 0.4
   panBackSeconds: 2
-  teleporterAnimator: {fileID: 0}
-  teleporterTriggerName: Activate
   waitAfterActivateSeconds: 2
-  vcamPlayer: {fileID: 0}
-  vcamTeleporter: {fileID: 0}
 --- !u!1 &1026508913801332990
 GameObject:
   m_ObjectHideFlags: 0
@@ -453,6 +448,8 @@ MonoBehaviour:
   position: {x: -5, y: 11}
   act1PlayerPosition: {x: -5, y: 11}
   act2PlayerPosition: {x: -21, y: -8}
+  act3PlayerPosition: {x: 0, y: 0}
+  act4PlayerPosition: {x: 0, y: 0}
 --- !u!1 &4271052045573288025
 GameObject:
   m_ObjectHideFlags: 0

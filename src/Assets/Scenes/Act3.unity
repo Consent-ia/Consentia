@@ -230,6 +230,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &698486942 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8623740858915841764, guid: eb91be039d08eb148b151f5b9d4a87d7, type: 3}
+  m_PrefabInstance: {fileID: 1459737765}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
 --- !u!1001 &739930143
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -240,11 +251,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 676775452926138435, guid: c48ce5016d1956641a02b6226cfa873f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.5
+      value: -23.5
       objectReference: {fileID: 0}
     - target: {fileID: 676775452926138435, guid: c48ce5016d1956641a02b6226cfa873f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 13.55
+      value: 12.55
       objectReference: {fileID: 0}
     - target: {fileID: 676775452926138435, guid: c48ce5016d1956641a02b6226cfa873f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -451,7 +462,7 @@ Transform:
   m_GameObject: {fileID: 1024041988}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 13.55, z: -10}
+  m_LocalPosition: {x: -23.5, y: 12.55, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -888,6 +899,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Managers
       objectReference: {fileID: 0}
+    - target: {fileID: 7829478981833333717, guid: db97d2db83742a2478c41f0e2301fe89, type: 3}
+      propertyPath: fadeImage
+      value: 
+      objectReference: {fileID: 698486942}
     - target: {fileID: 7983483386182513735, guid: db97d2db83742a2478c41f0e2301fe89, type: 3}
       propertyPath: tabPages.Array.data[0].tabImage
       value: 
@@ -941,10 +956,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1459737774}
     - target: {fileID: 8876399897920180694, guid: db97d2db83742a2478c41f0e2301fe89, type: 3}
-      propertyPath: choiceTexts.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8876399897920180694, guid: db97d2db83742a2478c41f0e2301fe89, type: 3}
       propertyPath: 'choiceTexts.Array.data[0]'
       value: 
       objectReference: {fileID: 1459737778}
@@ -952,14 +963,6 @@ PrefabInstance:
       propertyPath: 'choiceTexts.Array.data[1]'
       value: 
       objectReference: {fileID: 1459737777}
-    - target: {fileID: 8876399897920180694, guid: db97d2db83742a2478c41f0e2301fe89, type: 3}
-      propertyPath: 'choiceTexts.Array.data[2]'
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8876399897920180694, guid: db97d2db83742a2478c41f0e2301fe89, type: 3}
-      propertyPath: 'choiceTexts.Array.data[3]'
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

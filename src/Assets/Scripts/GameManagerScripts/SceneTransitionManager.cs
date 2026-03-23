@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -19,6 +20,9 @@ public class SceneTransitionManager : MonoBehaviour
     [Range(0.1f, 2f)]
     private float fadeInDuration = 0.4f;
 
+    private GameObject player;
+    private PlayerInput playerInput;
+
     private void Awake()
     {
         if (!Instance)
@@ -34,20 +38,32 @@ public class SceneTransitionManager : MonoBehaviour
     private void Start()
     {
         // Fade in when scene starts
-        if (fadeImage != null)
+        if (fadeImage)
         {
             StartCoroutine(FadeIn());
+        }
+    }
+    
+    private void OnEnable()  => SceneManager.sceneLoaded += OnSceneLoaded;
+    private void OnDisable() => SceneManager.sceneLoaded -= OnSceneLoaded;
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+        playerInput = player ? player.GetComponent<PlayerInput>() : null;
+        if (playerInput)
+        {
+            playerInput.enabled = true;
         }
     }
 
     public void TransitionToScene(string sceneName)
     {
-        StartCoroutine(TransitionCoroutine(sceneName));
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
-        if (player)
+        if (playerInput)
         {
-            player.GetComponent<PlayerMovement>().enabled = true;
+            playerInput.enabled = false;
         }
+        StartCoroutine(TransitionCoroutine(sceneName));
     }
 
     private IEnumerator TransitionCoroutine(string sceneName)

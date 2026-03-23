@@ -888,6 +888,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Managers
       objectReference: {fileID: 0}
+    - target: {fileID: 7829478981833333717, guid: db97d2db83742a2478c41f0e2301fe89, type: 3}
+      propertyPath: fadeImage
+      value: 
+      objectReference: {fileID: 1716444889}
     - target: {fileID: 7983483386182513735, guid: db97d2db83742a2478c41f0e2301fe89, type: 3}
       propertyPath: tabPages.Array.data[0].tabImage
       value: 
@@ -941,10 +945,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1459737774}
     - target: {fileID: 8876399897920180694, guid: db97d2db83742a2478c41f0e2301fe89, type: 3}
-      propertyPath: choiceTexts.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8876399897920180694, guid: db97d2db83742a2478c41f0e2301fe89, type: 3}
       propertyPath: 'choiceTexts.Array.data[0]'
       value: 
       objectReference: {fileID: 1459737778}
@@ -952,14 +952,6 @@ PrefabInstance:
       propertyPath: 'choiceTexts.Array.data[1]'
       value: 
       objectReference: {fileID: 1459737777}
-    - target: {fileID: 8876399897920180694, guid: db97d2db83742a2478c41f0e2301fe89, type: 3}
-      propertyPath: 'choiceTexts.Array.data[2]'
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8876399897920180694, guid: db97d2db83742a2478c41f0e2301fe89, type: 3}
-      propertyPath: 'choiceTexts.Array.data[3]'
-      value: 
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -987,6 +979,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f2ac07013c50b846bf1fa6382e3dfc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ChangeScene
+--- !u!114 &1716444889 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8623740858915841764, guid: eb91be039d08eb148b151f5b9d4a87d7, type: 3}
+  m_PrefabInstance: {fileID: 1459737765}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

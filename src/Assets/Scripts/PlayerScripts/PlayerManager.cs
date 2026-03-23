@@ -18,6 +18,10 @@ public class PlayerManager : MonoBehaviour
     private Vector2 act1PlayerPosition;
     [SerializeField]
     private Vector2 act2PlayerPosition;
+    [SerializeField]
+    private Vector2 act3PlayerPosition;
+    [SerializeField]
+    private Vector2 act4PlayerPosition;
 
     private GameObject currentPlayer;
 
@@ -60,6 +64,8 @@ public class PlayerManager : MonoBehaviour
         {
             "Act1" => act1PlayerPosition,
             "Act2" => act2PlayerPosition,
+            "Act3" => act3PlayerPosition,
+            "Act4" => act4PlayerPosition,
             _ => position
         };
 
