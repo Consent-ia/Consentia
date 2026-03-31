@@ -170,7 +170,7 @@ Animator:
   m_GameObject: {fileID: 3894479618626874563}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1f0f649543cc4a741a79d6760dc917c3, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -195,7 +195,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCController
   npcDialog: {fileID: 11400000, guid: 690e4ea94f5f7a24db5075ffe6588a7b, type: 2}
-  isQuestionNPC: 0
+  isQuestionNPC: 1
 --- !u!1001 &763591021872629916
 PrefabInstance:
   m_ObjectHideFlags: 0

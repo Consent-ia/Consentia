@@ -184,6 +184,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 346047327}
     m_Modifications:
+    - target: {fileID: 3894479618626874563, guid: 807a9d8f787dfe24285b7ac6c42f38ea, type: 3}
+      propertyPath: m_Name
+      value: Carta
+      objectReference: {fileID: 0}
     - target: {fileID: 7417197659566097130, guid: 807a9d8f787dfe24285b7ac6c42f38ea, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9.95
@@ -223,10 +227,6 @@ PrefabInstance:
     - target: {fileID: 7417197659566097130, guid: 807a9d8f787dfe24285b7ac6c42f38ea, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3894479618626874563, guid: 807a9d8f787dfe24285b7ac6c42f38ea, type: 3}
-      propertyPath: m_Name
-      value: Carta
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -290,10 +290,6 @@ PrefabInstance:
     - target: {fileID: 5450927268544947158, guid: 1da212d19855dc044848cd125f85259d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6065918504151659556, guid: 1da212d19855dc044848cd125f85259d, type: 3}
-      propertyPath: m_Controller
-      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6961818035910328574, guid: 1da212d19855dc044848cd125f85259d, type: 3}
       propertyPath: m_Name
