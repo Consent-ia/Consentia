@@ -14,35 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialog
   NPCName: Dweller
   DialogLines:
-  - text: Hello, traveler!
+  - text: Hey there, chief!
     isQuestion: 0
     choices: []
-  - text: Welcome to our village.
+  - text: This area is out of bounds...
     isQuestion: 0
     choices: []
-  - text: Is there anything I can help you with?
-    isQuestion: 0
-    choices: []
-  - text: Pick a card!
-    isQuestion: 1
-    choices:
-    - choiceText: 1
-      nextDialogIndex: 4
-    - choiceText: 2
-      nextDialogIndex: 5
-    - choiceText: 3
-      nextDialogIndex: 6
-    - choiceText: 4
-      nextDialogIndex: 7
-  - text: You picked card 1! Good choice.
-    isQuestion: 0
-    choices: []
-  - text: You picked card 2! Interesting...
-    isQuestion: 0
-    choices: []
-  - text: You picked card 3! Bold move!
-    isQuestion: 0
-    choices: []
-  - text: You picked card 4! Lucky number!
+  - text: Please continue on with your mission elsewhere.
     isQuestion: 0
     choices: []
