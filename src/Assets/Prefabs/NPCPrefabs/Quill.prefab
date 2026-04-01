@@ -86,12 +86,12 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 5704420531145803721, guid: 6c40a9db441f42545ade698d6dbaa78a, type: 3}
+  m_Sprite: {fileID: 5704420531145803721, guid: 0316ec7ac3a45f949a62af24ebb96a31, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.32, y: 0.49}
+  m_Size: {x: 0.46875, y: 0.8125}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -170,7 +170,7 @@ Animator:
   m_GameObject: {fileID: 6961818035910328574}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c67b9c8ee2e712e43b9daee56d743d3d, type: 2}
+  m_Controller: {fileID: 9100000, guid: 2f24ab3c890ba4842bfd817ce89c6ca3, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -194,7 +194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5232bd8fccb86a43a52b193b9b454ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCController
-  npcDialog: {fileID: 11400000, guid: e14aa7006ab17c740909df685b4b0ba5, type: 2}
+  npcDialog: {fileID: 11400000, guid: 2608be390d8eb4943aede8e6687023a9, type: 2}
   isQuestionNPC: 1
 --- !u!1001 &1789682357899332631
 PrefabInstance:
