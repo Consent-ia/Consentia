@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75e7bea227aaf2b499307efe1ddc0480, type: 3}
+  m_Name: PulseDialog
+  m_EditorClassIdentifier: Assembly-CSharp::NPCDialog
+  NPCName: Pulse
+  DialogLines:
+  - text: This door... it can't seem to open.
+    isQuestion: 0
+    choices: []
+  - text: "It\u2019s not broken though... It\u2019s\u2026 confused."
+    isQuestion: 0
+    choices: []
+  - text: This sector tracks movement in sequences.
+    isQuestion: 0
+    choices: []
+  - text: Enter. Traverse. Unlock. Proceed.
+    isQuestion: 0
+    choices: []
+  - text: Right now, it sees each of your actions as separate events.
+    isQuestion: 0
+    choices: []
+  - text: Like different people pressing different switches.
+    isQuestion: 0
+    choices: []
+  - text: "So when you reach the door\u2026 it doesn\u2019t recognize the steps that
+      brought you here."
+    isQuestion: 0
+    choices: []
+  - text: If I stabilize your run, the system will treat everything you do in this
+      sector as one continuous sequence.
+    isQuestion: 0
+    choices: []
+  - text: "Then the door will know it\u2019s still... you."
+    isQuestion: 0
+    choices: []
+  - text: "It only holds while you\u2019re down here. Once you leave, it resets."
+    isQuestion: 0
+    choices: []
+  - text: Do you want me to link your actions together?
+    isQuestion: 1
+    choices:
+    - choiceText: Link the sequence
+      nextDialogIndex: 11
+    - choiceText: Leave it fragmented.
+      nextDialogIndex: 12
+  - text: Good. Let's hope the door recognizes your path.
+    isQuestion: 0
+    choices: []
+  - text: "Then the system stays blind. Don\u2019t expect the door to cooperate."
+    isQuestion: 0
+    choices: []
