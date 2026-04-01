@@ -17,7 +17,7 @@ MonoBehaviour:
   - text: "Chief\u2026 you came through the portal!"
     isQuestion: 0
     choices: []
-  - text: Good. That means the portal is still holding together.
+  - text: That means the portal is still holding together.
     isQuestion: 0
     choices: []
   - text: "This one here links the upper wards to the deep sector\u2026 and further
