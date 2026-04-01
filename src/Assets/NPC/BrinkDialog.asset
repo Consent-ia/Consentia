@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75e7bea227aaf2b499307efe1ddc0480, type: 3}
+  m_Name: BrinkDialog
+  m_EditorClassIdentifier: Assembly-CSharp::NPCDialog
+  NPCName: Brink
+  DialogLines:
+  - text: You picked a bad time to come down here.
+    isQuestion: 0
+    choices: []
+  - text: "See those lines? They\u2019re flooding."
+    isQuestion: 0
+    choices: []
+  - text: Every scanner in the sector is firing reports as fast as it can.
+    isQuestion: 0
+    choices: []
+  - text: No pacing. No spacing. Just noise.
+    isQuestion: 0
+    choices: []
+  - text: "The core can\u2019t handle that."
+    isQuestion: 0
+    choices: []
+  - text: Too much at once, and the data stops meaning anything.
+    isQuestion: 0
+    choices: []
+  - text: "It doesn\u2019t help to know everything\u2026 if it all arrives at the
+      same time."
+    isQuestion: 0
+    choices: []
+  - text: I can throttle it. Slow the stream. Make the signals readable again.
+    isQuestion: 0
+    choices: []
+  - text: "Same data. Just\u2026 controlled."
+    isQuestion: 0
+    choices: []
+  - text: Want me to regulate the flow?
+    isQuestion: 1
+    choices:
+    - choiceText: Regulate the flow.
+      nextDialogIndex: 10
+    - choiceText: Leave it as is.
+      nextDialogIndex: 11
+  - text: Good. The system will breathe again.
+    isQuestion: 0
+    choices: []
+  - text: Your call, Chief. There might be unclean readings.
+    isQuestion: 0
+    choices: []
