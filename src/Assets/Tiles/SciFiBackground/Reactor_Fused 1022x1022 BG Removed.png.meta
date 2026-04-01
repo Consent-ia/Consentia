@@ -1,0 +1,1249 @@
+fileFormatVersion: 2
+guid: ecd5c425e3c2c104dba6a032c3f713ac
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8454872218555991572
+    second: Reactor_Fused 1022x1022 BG Removed_0
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 146
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Reactor_Fused 1022x1022 BG Removed_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 876
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4164958ac7db55570800000000000000
+      internalID: 8454872218555991572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor_Fused 1022x1022 BG Removed_1
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 876
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1724f71c824b9fa469cb14b840e44041
+      internalID: -418183713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor_Fused 1022x1022 BG Removed_2
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 876
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfeb863796a42ce4996a1001a4336277
+      internalID: 1978675743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor_Fused 1022x1022 BG Removed_3
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 876
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e881f96c7d8e7c642abbd941d11e23fe
+      internalID: -636907362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor_Fused 1022x1022 BG Removed_4
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 876
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3ffd57ffec94c04087a27726baa96d0
+      internalID: 315208144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor_Fused 1022x1022 BG Removed_5
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 876
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa757e3834dfcf747823493428661c94
+      internalID: -1535113991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor_Fused 1022x1022 BG Removed_6
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 876
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25dc7b961addae44ab4903a906378f78
+      internalID: 1577307473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor_Fused 1022x1022 BG Removed_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 730
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f83907d901594447bfb4f88385bab43
+      internalID: -321015234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor_Fused 1022x1022 BG Removed_8
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 730
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac451780e4dfd7f488ee1169045a7763
+      internalID: 2034355780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor_Fused 1022x1022 BG Removed_9
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 730
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0655ba0181f774346b574c282ae41103
+      internalID: -668398348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor_Fused 1022x1022 BG Removed_10
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 730
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ff99d10935e81f40a894e4a09e86289
+      internalID: -904223826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor_Fused 1022x1022 BG Removed_11
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 730
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6eb9f87460af08c4f8a3138a2beaa792
+      internalID: 2024173417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor_Fused 1022x1022 BG Removed_12
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 730
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72c4459ef76934b4889a7377c1b8e33f
+      internalID: 2140716944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor_Fused 1022x1022 BG Removed_13
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 730
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9378fa6aa5aca374caf468ede785b665
+      internalID: 230571373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor_Fused 1022x1022 BG Removed_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 584
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89fef41ba0a1e4547ae92a3e72fc4315
+      internalID: -457009810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor_Fused 1022x1022 BG Removed_15
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 584
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09f3a0f53ee20684aaf9fde6cac46cf2
+      internalID: 939378741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor_Fused 1022x1022 BG Removed_16
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 584
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ce8afe7cfcd6ef4682058cc57a9631d
+      internalID: -1320234397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor_Fused 1022x1022 BG Removed_17
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 584
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 756a757cf88394d4ca7180ec04afec65
+      internalID: 1428391704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor_Fused 1022x1022 BG Removed_18
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 584
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 541cea608eda4054ba2c4edffff561d8
+      internalID: 1857043993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor_Fused 1022x1022 BG Removed_19
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 584
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdedb042ad1b1504db76ef9a07ebe3f7
+      internalID: -586277416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor_Fused 1022x1022 BG Removed_20
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 584
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcd632c8ee0099449af30df6946c9bf1
+      internalID: 867069315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor_Fused 1022x1022 BG Removed_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 438
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0c1d590c18d99e4bbc9ac97e98abd1c
+      internalID: -818263071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor_Fused 1022x1022 BG Removed_22
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 438
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1945d5b20465444f9e508aab7df1a6b
+      internalID: -2128884389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor_Fused 1022x1022 BG Removed_23
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 438
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a3de502f62b1d7479db3def9f2e9aef
+      internalID: -856297353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor_Fused 1022x1022 BG Removed_24
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 438
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dabeb683e8f1cf42b8e4878ab5084f8
+      internalID: -1881211981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor_Fused 1022x1022 BG Removed_25
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 438
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6aaaef1af81959944ac43b5301cd7faa
+      internalID: 1566166821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor_Fused 1022x1022 BG Removed_26
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 438
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddc291abef3ac894c862e821ac514142
+      internalID: -1947711775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor_Fused 1022x1022 BG Removed_27
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 438
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 235d284d18d6b7c43afce9c352265e5c
+      internalID: 950790041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor_Fused 1022x1022 BG Removed_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 292
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5520b497dc431149b2deadf187d793b
+      internalID: -540793905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor_Fused 1022x1022 BG Removed_29
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 292
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60292ba169eb1c146923b940ee5322b8
+      internalID: 2061327992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor_Fused 1022x1022 BG Removed_30
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 292
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67cb2e2c7bacfec4e9187e66435d8efe
+      internalID: 1957942299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor_Fused 1022x1022 BG Removed_31
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 292
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20753dd06616f4142a4d395e11d2af49
+      internalID: -427986681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor_Fused 1022x1022 BG Removed_32
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 292
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44ea738f1918708489498c4b06f0bfc1
+      internalID: 1125750917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor_Fused 1022x1022 BG Removed_33
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 292
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62b312ebdd539a04095f5b40070230c0
+      internalID: -477104341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor_Fused 1022x1022 BG Removed_34
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 292
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1af0c1d1459f624b9bad28a5fd4624f
+      internalID: 299168392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor_Fused 1022x1022 BG Removed_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 146
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85b4eb063cfd4444194dae18d2d6241e
+      internalID: -1665691973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor_Fused 1022x1022 BG Removed_36
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 146
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a372a4c0984cf246a63a0f145543384
+      internalID: 1186382612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor_Fused 1022x1022 BG Removed_37
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 146
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72613625b22cb434389afc6b669c27a7
+      internalID: -1501850223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor_Fused 1022x1022 BG Removed_38
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 146
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4506bfa0dcddafe4aa4e1ea69d2984a9
+      internalID: 992997898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor_Fused 1022x1022 BG Removed_39
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 146
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5c4484a179d06646b1bbb13530460f7
+      internalID: -879976299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor_Fused 1022x1022 BG Removed_40
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 146
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52afa9732a3d5644a8c6f2eeeaa26c53
+      internalID: -1473840345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor_Fused 1022x1022 BG Removed_41
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 146
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1acbf9608d957947b99475bb639a7f3
+      internalID: 259261006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor_Fused 1022x1022 BG Removed_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40c4e6eb940b44342bcea26ca317aae7
+      internalID: 2075783637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor_Fused 1022x1022 BG Removed_43
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 0
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f60cf30e84d0f34187b86aaba2f1e1f
+      internalID: -1446461153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor_Fused 1022x1022 BG Removed_44
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 0
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd327f6af8a233445b9885975891270b
+      internalID: 1029987919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor_Fused 1022x1022 BG Removed_45
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 0
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6916ab3354cc2e84b9cdb12c3be4b72d
+      internalID: -309578617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor_Fused 1022x1022 BG Removed_46
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 0
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d602f960eefdb64ba3a5a2ed326256b
+      internalID: -744616502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor_Fused 1022x1022 BG Removed_47
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 0
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78493ec6fad548c4fbcbb2315c68f695
+      internalID: 2082971482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Reactor_Fused 1022x1022 BG Removed_48
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 0
+        width: 146
+        height: 146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b489aaef4aa2964588ba9b4a9688561
+      internalID: 1348553795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 4dc15a993c2faed4fbc3a38564c7a37b
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":7.0,"y":7.0},"gridSpriteSize":{"x":146.0,"y":146.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Reactor_Fused 1022x1022 BG Removed_0: 8454872218555991572
+      Reactor_Fused 1022x1022 BG Removed_1: -418183713
+      Reactor_Fused 1022x1022 BG Removed_10: -904223826
+      Reactor_Fused 1022x1022 BG Removed_11: 2024173417
+      Reactor_Fused 1022x1022 BG Removed_12: 2140716944
+      Reactor_Fused 1022x1022 BG Removed_13: 230571373
+      Reactor_Fused 1022x1022 BG Removed_14: -457009810
+      Reactor_Fused 1022x1022 BG Removed_15: 939378741
+      Reactor_Fused 1022x1022 BG Removed_16: -1320234397
+      Reactor_Fused 1022x1022 BG Removed_17: 1428391704
+      Reactor_Fused 1022x1022 BG Removed_18: 1857043993
+      Reactor_Fused 1022x1022 BG Removed_19: -586277416
+      Reactor_Fused 1022x1022 BG Removed_2: 1978675743
+      Reactor_Fused 1022x1022 BG Removed_20: 867069315
+      Reactor_Fused 1022x1022 BG Removed_21: -818263071
+      Reactor_Fused 1022x1022 BG Removed_22: -2128884389
+      Reactor_Fused 1022x1022 BG Removed_23: -856297353
+      Reactor_Fused 1022x1022 BG Removed_24: -1881211981
+      Reactor_Fused 1022x1022 BG Removed_25: 1566166821
+      Reactor_Fused 1022x1022 BG Removed_26: -1947711775
+      Reactor_Fused 1022x1022 BG Removed_27: 950790041
+      Reactor_Fused 1022x1022 BG Removed_28: -540793905
+      Reactor_Fused 1022x1022 BG Removed_29: 2061327992
+      Reactor_Fused 1022x1022 BG Removed_3: -636907362
+      Reactor_Fused 1022x1022 BG Removed_30: 1957942299
+      Reactor_Fused 1022x1022 BG Removed_31: -427986681
+      Reactor_Fused 1022x1022 BG Removed_32: 1125750917
+      Reactor_Fused 1022x1022 BG Removed_33: -477104341
+      Reactor_Fused 1022x1022 BG Removed_34: 299168392
+      Reactor_Fused 1022x1022 BG Removed_35: -1665691973
+      Reactor_Fused 1022x1022 BG Removed_36: 1186382612
+      Reactor_Fused 1022x1022 BG Removed_37: -1501850223
+      Reactor_Fused 1022x1022 BG Removed_38: 992997898
+      Reactor_Fused 1022x1022 BG Removed_39: -879976299
+      Reactor_Fused 1022x1022 BG Removed_4: 315208144
+      Reactor_Fused 1022x1022 BG Removed_40: -1473840345
+      Reactor_Fused 1022x1022 BG Removed_41: 259261006
+      Reactor_Fused 1022x1022 BG Removed_42: 2075783637
+      Reactor_Fused 1022x1022 BG Removed_43: -1446461153
+      Reactor_Fused 1022x1022 BG Removed_44: 1029987919
+      Reactor_Fused 1022x1022 BG Removed_45: -309578617
+      Reactor_Fused 1022x1022 BG Removed_46: -744616502
+      Reactor_Fused 1022x1022 BG Removed_47: 2082971482
+      Reactor_Fused 1022x1022 BG Removed_48: 1348553795
+      Reactor_Fused 1022x1022 BG Removed_5: -1535113991
+      Reactor_Fused 1022x1022 BG Removed_6: 1577307473
+      Reactor_Fused 1022x1022 BG Removed_7: -321015234
+      Reactor_Fused 1022x1022 BG Removed_8: 2034355780
+      Reactor_Fused 1022x1022 BG Removed_9: -668398348
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
