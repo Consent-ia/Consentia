@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75e7bea227aaf2b499307efe1ddc0480, type: 3}
+  m_Name: QuillDialog
+  m_EditorClassIdentifier: Assembly-CSharp::NPCDialog
+  NPCName: Quill
+  DialogLines:
+  - text: Chief! Just one moment.
+    isQuestion: 0
+    choices: []
+  - text: "You\u2019d be surprised how many people pass through this level and never
+      realize they\u2019ve been counted."
+    isQuestion: 0
+    choices: []
+  - text: "Not by name, mind you. I\u2019m not one of Aster\u2019s keepers."
+    isQuestion: 0
+    choices: []
+  - text: I keep the short logs. Shift notes. Traffic notes. Route notes.
+    isQuestion: 0
+    choices: []
+  - text: "Enough to tell whether the sector is flowing cleanly\u2026 whether a repaired
+      gate actually helped\u2026 whether explorers are circling, stalling, or doubling
+      back."
+    isQuestion: 0
+    choices: []
+  - text: "The records don\u2019t last long. They are brief by design."
+    isQuestion: 0
+    choices: []
+  - text: "A day\u2019s worth of movement is often enough to reveal a fault."
+    isQuestion: 0
+    choices: []
+  - text: Too little, and we repair in darkness.
+    isQuestion: 0
+    choices: []
+  - text: Too much, and the lower archive swells with noise.
+    isQuestion: 0
+    choices: []
+  - text: So I keep only a short-lived entry for each visitor while the sector is
+      active.
+    isQuestion: 0
+    choices: []
+  - text: A temporary trace. Useful, then gone.
+    isQuestion: 0
+    choices: []
+  - text: Would you permit a short entry for your movement through the dungeon, Chief?
+    isQuestion: 1
+    choices:
+    - choiceText: Yes, keep the short entry.
+      nextDialogIndex: 12
+    - choiceText: No, record nothing temporary.
+      nextDialogIndex: 13
+  - text: "Thank you. I\u2019ll note the route briefly, then let it fade with the
+      cycle."
+    isQuestion: 0
+    choices: []
+  - text: Understood. Then your passage will leave no short-term entry in my daybook.
+    isQuestion: 0
+    choices: []
