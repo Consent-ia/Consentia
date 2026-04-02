@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75e7bea227aaf2b499307efe1ddc0480, type: 3}
+  m_Name: VelorDialog
+  m_EditorClassIdentifier: Assembly-CSharp::NPCDialog
+  NPCName: Quill
+  DialogLines:
+  - text: Chief! Finally... someone who understands presentation.
+    isQuestion: 0
+    choices: []
+  - text: Look around you.
+    isQuestion: 0
+    choices: []
+  - text: These buildings used to adapt, to respond.
+    isQuestion: 0
+    choices: []
+  - text: Every display tuned itself to the passerby.
+    isQuestion: 0
+    choices: []
+  - text: "A glance, a pause\u2026 and the city remembered."
+    isQuestion: 0
+    choices: []
+  - text: Not perfectly, but enough to matter.
+    isQuestion: 0
+    choices: []
+  - text: Now everything is the same.
+    isQuestion: 0
+    choices: []
+  - text: Loud. Random. Wasteful.
+    isQuestion: 0
+    choices: []
+  - text: I can restore the adaptive display grid.
+    isQuestion: 0
+    choices: []
+  - text: The signals will adjust based on what seems to catch your attention, even
+      across districts.
+    isQuestion: 0
+    choices: []
+  - text: "Tell me, Chief\u2026"
+    isQuestion: 0
+    choices: []
+  - text: Shall the city tailor its messages to you?
+    isQuestion: 1
+    choices:
+    - choiceText: Restore the adaptive display grid.
+      nextDialogIndex: 12
+    - choiceText: Keep all displays generic.
+      nextDialogIndex: 13
+  - text: Ah, brilliance returns. The skyline will no longer guess, it will know
+      where to look.
+    isQuestion: 0
+    choices: []
+  - text: A fair restraint. Then every signal shall remain equal, and none shall
+      follow you.
+    isQuestion: 0
+    choices: []
