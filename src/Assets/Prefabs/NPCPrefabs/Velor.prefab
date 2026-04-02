@@ -194,7 +194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5232bd8fccb86a43a52b193b9b454ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCController
-  npcDialog: {fileID: 0}
+  npcDialog: {fileID: 11400000, guid: fe6f840221d34a94e88db705c2c799d3, type: 2}
   isQuestionNPC: 1
 --- !u!1001 &883003258413076341
 PrefabInstance:

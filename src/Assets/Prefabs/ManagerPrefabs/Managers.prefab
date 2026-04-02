@@ -449,7 +449,7 @@ MonoBehaviour:
   act1PlayerPosition: {x: -5, y: 11}
   act2PlayerPosition: {x: -21, y: -8}
   act3PlayerPosition: {x: -6.5, y: 14}
-  act4PlayerPosition: {x: 0, y: 0}
+  act4PlayerPosition: {x: -20, y: -14.5}
 --- !u!1 &4271052045573288025
 GameObject:
   m_ObjectHideFlags: 0
