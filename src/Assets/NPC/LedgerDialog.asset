@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75e7bea227aaf2b499307efe1ddc0480, type: 3}
+  m_Name: LedgerDialog
+  m_EditorClassIdentifier: Assembly-CSharp::NPCDialog
+  NPCName: Ledger
+  DialogLines:
+  - text: Chief. Imma be real with you.
+    isQuestion: 0
+    choices: []
+  - text: Signals are active.
+    isQuestion: 0
+    choices: []
+  - text: Results are not.
+    isQuestion: 0
+    choices: []
+  - text: "We don\u2019t know what works."
+    isQuestion: 0
+    choices: []
+  - text: Enable response tracking?
+    isQuestion: 1
+    choices:
+    - choiceText: Enable response logging.
+      nextDialogIndex: 5
+    - choiceText: Leave it unmeasured.
+      nextDialogIndex: 6
+  - text: Confirmed. Signal-to-action tracking restored.
+    isQuestion: 0
+    choices: []
+  - text: Understood. Operations continue without measurement.
+    isQuestion: 0
+    choices: []
