@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75e7bea227aaf2b499307efe1ddc0480, type: 3}
   m_Name: VelorDialog
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialog
-  NPCName: Quill
+  NPCName: Velor
   DialogLines:
   - text: Chief! Finally... someone who understands presentation.
     isQuestion: 0
