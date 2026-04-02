@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6065918504151659556}
   - component: {fileID: 1534472351044541227}
   m_Layer: 8
-  m_Name: Pulse
+  m_Name: Mirr
   m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -86,12 +86,12 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 6578228443007280758, guid: 49c37b44f33bde9488cf137a01a9fe99, type: 3}
+  m_Sprite: {fileID: 5704420531145803721, guid: f56523505477b6947a43096c308cea2f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.46875, y: 0.78125}
+  m_Size: {x: 0.31, y: 0.51}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -170,7 +170,7 @@ Animator:
   m_GameObject: {fileID: 6961818035910328574}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3fb973705ca744c4693ef948d9d0b4c6, type: 2}
+  m_Controller: {fileID: 9100000, guid: 473986609f99f524fad54e9d43dd4c3f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -194,7 +194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5232bd8fccb86a43a52b193b9b454ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCController
-  npcDialog: {fileID: 11400000, guid: 270233e207fc8684d89d6b8a8ee9aeee, type: 2}
+  npcDialog: {fileID: 0}
   isQuestionNPC: 1
 --- !u!1001 &883003258413076341
 PrefabInstance:
