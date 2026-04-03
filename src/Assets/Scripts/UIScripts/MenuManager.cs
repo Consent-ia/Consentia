@@ -36,7 +36,7 @@ public class MenuManager : MonoBehaviour
         }
     }
 
-    private void CloseMenu()
+    public void CloseMenu()
     {
         mainMenu.SetActive(false);
         Time.timeScale = 1f; // Resume the game
@@ -46,5 +46,16 @@ public class MenuManager : MonoBehaviour
     {
         mainMenu.SetActive(true);
         Time.timeScale = 0f; // Pause the game
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
+
+    public void RestartGame()
+    {
+        SceneTransitionManager.Instance.TransitionToScene("Act1");
+        CloseMenu();
     }
 }

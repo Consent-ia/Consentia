@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 4fc5b1b22e64db145aa7935f2a09aaa9
+guid: 4607317b21702f645bd56ae82fde45e9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3688515304802840883
-    second: gold_slider_pressed_0
+      213: 463402251585782187
+    second: Act3Image_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 64
+  spritePixelsToUnits: 1080
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: gold_slider_pressed_0
+      name: Act3Image_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 58
-        height: 9
+        width: 1738
+        height: 1253
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dce82a47fd2cfccc0800000000000000
-      internalID: -3688515304802840883
+      spriteID: ba103e184e55e6600800000000000000
+      internalID: 463402251585782187
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      gold_slider_pressed_0: -3688515304802840883
+      Act3Image_0: 463402251585782187
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

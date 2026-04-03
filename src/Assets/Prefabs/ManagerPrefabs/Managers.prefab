@@ -600,6 +600,7 @@ GameObject:
   - component: {fileID: 5722690232435265553}
   - component: {fileID: 805642719666131987}
   - component: {fileID: 7983483386182513735}
+  - component: {fileID: 8723217632541718375}
   m_Layer: 0
   m_Name: MenuManager
   m_TagString: Untagged
@@ -660,3 +661,27 @@ MonoBehaviour:
   defaultActiveColor: {r: 1, g: 1, b: 1, a: 1}
   defaultInactiveColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   tabClickSound: {fileID: 8300000, guid: 5af9042a3dbe9224fa0e0895436fa253, type: 3}
+--- !u!114 &8723217632541718375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9140430075325880836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d4a87f827294a91a07dce48c33c8caf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MapPageImageController
+  actImages:
+  - sceneName: Act1
+    actImage: {fileID: 0}
+  - sceneName: Act2
+    actImage: {fileID: 0}
+  - sceneName: Act3
+    actImage: {fileID: 0}
+  - sceneName: Act4
+    actImage: {fileID: 0}
+  - sceneName: Act5
+    actImage: {fileID: 0}
+  hideAllIfNoMatch: 1
