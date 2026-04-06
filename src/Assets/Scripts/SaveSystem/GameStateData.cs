@@ -9,7 +9,6 @@ public class GameStateData
     // Player position (optional but recommended)
     public float playerX;
     public float playerY;
-    public float playerZ;
 
     // Progress (example: which NPCs were interacted in current act)
     public List<string> interactedNpcNames = new();

@@ -2,66 +2,57 @@ using System;
 using System.IO;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
-public class GameStateSaveSystem : MonoBehaviour
+public class GameSaveState : MonoBehaviour
 {
-    public static GameStateSaveSystem Instance { get; private set; }
+    public static GameSaveState Instance { get; private set; }
 
-    [Header("Where to find the player at runtime")] [SerializeField]
-    private string playerTag = "Player";
+    private const string playerTag = "Player";
 
-    // Which slot is active (one save file per "New Game")
-    private string currentSlotId;
+    private GameObject player;
 
+    // Single-slot overwrite save (always one file at a time)
+    private const string SaveFileName = "saveState.json";
+    
     private void Awake()
     {
-        if (!Instance) Instance = this;
+        if (!Instance)
+        {
+            Instance = this;
+        }
         else
         {
             Destroy(gameObject);
-            return;
         }
-
-        // Persist across scenes so autosave/load and slot selection always works.
-        // DontDestroyOnLoad(gameObject);
-
-        // Load last used slot (optional)
-        currentSlotId = PlayerPrefs.GetString("CurrentSlotId", "");
     }
 
-    // ---------- Slot / Path ----------
-    public void SetCurrentSlot(string slotId)
+    // ---------- Path ----------
+    private static string GetSavePath()
     {
-        currentSlotId = slotId;
-        PlayerPrefs.SetString("CurrentSlotId", currentSlotId);
-        PlayerPrefs.Save();
+        return Path.Combine(Application.persistentDataPath, SaveFileName);
     }
 
-    public static string CreateNewSlotId()
+    /// <summary>
+    /// Deletes the current game-state save file.
+    /// Call this when starting a New Game to fully overwrite prior progress.
+    /// </summary>
+    public static void DeleteSaveFile()
     {
-        // Easy unique id: timestamp
-        return DateTime.UtcNow.ToString("yyyyMMdd_HHmmss");
-    }
-
-    private static string GetSlotPath(string slotId)
-    {
-        return Path.Combine(Application.persistentDataPath, $"save_state_{slotId}.json");
+        string path = GetSavePath();
+        if (!File.Exists(path)) return;
+        File.Delete(path);
+        Debug.Log($"Deleted game state save: {path}");
     }
 
     // ---------- Save ----------
-    public void SaveGameState()
+    private static void SaveGameState()
     {
-        if (string.IsNullOrEmpty(currentSlotId))
-        {
-            Debug.LogWarning("No active slot id set. Not saving game state.");
-            return;
-        }
-
         var data = CaptureState();
-        WriteToDisk(GetSlotPath(currentSlotId), data);
+        WriteToDisk(GetSavePath(), data);
     }
 
-    private GameStateData CaptureState()
+    private static GameStateData CaptureState()
     {
         var data = new GameStateData
         {
@@ -74,7 +65,6 @@ public class GameStateSaveSystem : MonoBehaviour
             Vector3 p = player.transform.position;
             data.playerX = p.x;
             data.playerY = p.y;
-            data.playerZ = p.z;
         }
 
         // Progress integration
@@ -102,20 +92,9 @@ public class GameStateSaveSystem : MonoBehaviour
     }
 
     // ---------- Load ----------
-    public void LoadGameStateFromCurrentSlot()
+    public void LoadGameState()
     {
-        if (string.IsNullOrEmpty(currentSlotId))
-        {
-            Debug.LogWarning("No active slot id set. Not loading game state.");
-            return;
-        }
-
-        LoadGameState(currentSlotId);
-    }
-
-    public void LoadGameState(string slotId)
-    {
-        string path = GetSlotPath(slotId);
+        string path = GetSavePath();
         if (!File.Exists(path))
         {
             Debug.LogWarning($"No save state file found at: {path}");
@@ -127,20 +106,9 @@ public class GameStateSaveSystem : MonoBehaviour
             var json = File.ReadAllText(path);
             var data = JsonUtility.FromJson<GameStateData>(json);
 
-            // Set slot as active
-            SetCurrentSlot(slotId);
-
-            // Load the scene, then apply player/progress after scene finishes loading
-            void Handler(Scene scene, LoadSceneMode mode)
-            {
-                if (scene.name != data.sceneName) return;
-                SceneManager.sceneLoaded -= Handler;
-                ApplyState(data);
-            }
-
-            SceneManager.sceneLoaded += Handler;
-
-            SceneTransitionManager.Instance.TransitionToScene(data.sceneName);
+            // Robust load pipeline: transition scene first, then wait until runtime
+            // objects exist and have run their own OnSceneLoaded initializers.
+            StartCoroutine(LoadPipelineCoroutine(data));
         }
         catch (Exception e)
         {
@@ -148,12 +116,45 @@ public class GameStateSaveSystem : MonoBehaviour
         }
     }
 
+    private IEnumerator LoadPipelineCoroutine(GameStateData data)
+    {
+        // Kick off scene transition.
+        ChangeScene.changeToScene(data.sceneName);
+
+        // Wait until the correct scene is active.
+        while (SceneManager.GetActiveScene().name != data.sceneName)
+            yield return null;
+
+        // Wait a couple frames so other sceneLoaded handlers (PlayerManager/ProgressManager)
+        // run and finish their own initialization.
+        yield return null;
+        yield return null;
+
+        // Wait for player & progress manager to exist.
+        float timeout = 5f;
+        while (timeout > 0f)
+        {
+            player = GameObject.FindGameObjectWithTag(playerTag);
+            if (player && ProgressManager.Instance) break;
+            timeout -= Time.unscaledDeltaTime;
+            yield return null;
+        }
+
+        ApplyState(data);
+
+        // Apply again at end-of-frame to defeat any late spawn/teleport scripts.
+        yield return new WaitForEndOfFrame();
+        ApplyState(data);
+    }
+
     private void ApplyState(GameStateData data)
     {
-        var player = GameObject.FindGameObjectWithTag(playerTag);
+        var loadedPos = new Vector3(data.playerX, data.playerY);
+        PlayerManager.SetNextLoadedPlayerPosition(loadedPos);
+
         if (player)
         {
-            player.transform.position = new Vector3(data.playerX, data.playerY, data.playerZ);
+            player.transform.position = loadedPos;
         }
 
         // Restore progress
@@ -162,17 +163,17 @@ public class GameStateSaveSystem : MonoBehaviour
             ProgressManager.Instance.SetInteractedNpcNames(data.interactedNpcNames);
         }
 
-        Debug.Log($"Game state applied. Scene={data.sceneName} SavedAt={data.savedAtUtc}");
+        // Force NPCs in the active scene to resync their local hasInteracted flags.
+        // This is needed because NPCControllers may have already run Start() before
+        // we restored ProgressManager's interacted set.
+        var npcs = FindObjectsByType<NPCController>(FindObjectsSortMode.None);
+        foreach (var npc in npcs)
+            npc.SyncFromProgressManager();
     }
 
     // ---------- Autosave hooks ----------
     private void OnApplicationQuit()
     {
         SaveGameState();
-    }
-
-    private void OnApplicationPause(bool paused)
-    {
-        if (paused) SaveGameState();
     }
 }

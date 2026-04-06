@@ -8,22 +8,27 @@ public class ChangeScene : MonoBehaviour
         string currentScene = SceneManager.GetActiveScene().name;
         string nextSceneName = currentScene switch
         {
+            "IntroAct"  => "Act1",
             "Act1" => "Act2",
             "Act2" => "Act3",
             "Act3" => "Act4",
-            "Act4" => "Act1",
+            "Act4" => "Act5",
             _ => currentScene
         };
+        
+        changeToScene(nextSceneName);
+    }
 
+    public static void changeToScene(string sceneName)
+    {
         if (SceneTransitionManager.Instance)
         {
-            SceneTransitionManager.Instance.TransitionToScene(nextSceneName);
+            SceneTransitionManager.Instance.TransitionToScene(sceneName);
         }
         else
         {
             // Fallback if SceneTransitionManager is not found
-            Debug.LogWarning("SceneTransitionManager not found! Loading scene directly.");
-            SceneManager.LoadScene(nextSceneName, LoadSceneMode.Single);
+            SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
         }
     }
 }

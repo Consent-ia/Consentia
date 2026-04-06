@@ -55,7 +55,7 @@ public class MenuManager : MonoBehaviour
 
     public void RestartGame()
     {
-        SceneTransitionManager.Instance.TransitionToScene("Act1");
+        SaveSlotMenuController.Instance.NewGame();
         CloseMenu();
     }
 }

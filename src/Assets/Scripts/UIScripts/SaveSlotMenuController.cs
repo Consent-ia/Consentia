@@ -9,54 +9,48 @@ using UnityEngine;
 /// </summary>
 public class SaveSlotMenuController : MonoBehaviour
 {
-    [Header("First scene to start for a new game")]
-    [SerializeField] private string startingSceneName = "Act1";
+    public static SaveSlotMenuController Instance { get; private set; }
+
+    private const string startingSceneName = "Act1";
+
+    private void Awake()
+    {
+        if (!Instance)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     public void NewGame()
     {
-        if (!GameStateSaveSystem.Instance)
-        {
-            Debug.LogWarning("GameStateSaveSystem not found in scene.");
-            return;
-        }
-
-        // Create a new slot id and set it for BOTH systems.
-        string slotId = GameStateSaveSystem.CreateNewSlotId();
-        GameStateSaveSystem.Instance.SetCurrentSlot(slotId);
-
+        // Single-slot new game: fully overwrite prior progress.
         if (SaveSystem.Instance)
         {
-            SaveSystem.Instance.SetCurrentSlot(slotId);
-            SaveSystem.Instance.ClearAllChoices();
+            SaveSystem.Instance.DeleteSaveFile();
         }
 
-        // Save initial state (optional) then start the game.
-        GameStateSaveSystem.Instance.SaveGameState();
-        SceneTransitionManager.Instance.TransitionToScene(startingSceneName);
+        if (GameSaveState.Instance)
+        {
+            GameSaveState.DeleteSaveFile();
+        }
+
+        ChangeScene.changeToScene(startingSceneName);
     }
 
     public void LoadGame()
     {
-        if (!GameStateSaveSystem.Instance)
+        if (!GameSaveState.Instance)
         {
             Debug.LogWarning("GameStateSaveSystem not found in scene.");
             return;
         }
 
-        // Ensure the dialog choice system uses the same slot as the state system.
-        string slotId = PlayerPrefs.GetString("CurrentSlotId", "");
-        if (string.IsNullOrEmpty(slotId))
-        {
-            Debug.LogWarning("No CurrentSlotId found. Nothing to load.");
-            return;
-        }
-
-        if (SaveSystem.Instance)
-        {
-            SaveSystem.Instance.SetCurrentSlot(slotId);
-        }
-
-        GameStateSaveSystem.Instance.LoadGameState(slotId);
+        // Single-slot load.
+        GameSaveState.Instance.LoadGameState();
     }
 }
 

@@ -24,8 +24,7 @@ public class SceneTransitionManager : MonoBehaviour
     private PlayerInput playerInput;
     
     // IntroAct Buttons
-    private GameObject newGame;
-    private GameObject loadGame;
+    private GameObject landingScreen;
 
     private void Awake()
     {
@@ -67,10 +66,8 @@ public class SceneTransitionManager : MonoBehaviour
     
     private void DeactivateIntroButtons()
     {
-        newGame = GameObject.FindGameObjectWithTag("NewGame");
-        loadGame = GameObject.FindGameObjectWithTag("LoadGame");
-        if (newGame) newGame.SetActive(false);
-        if (loadGame) loadGame.SetActive(false);
+        landingScreen = GameObject.FindGameObjectWithTag("LandingScreen");
+        if (landingScreen) landingScreen.SetActive(false);
     }
 
     public void TransitionToScene(string sceneName)
@@ -82,12 +79,6 @@ public class SceneTransitionManager : MonoBehaviour
             playerInput.DeactivateInput();
             if (playerInput.actions)
                 playerInput.actions.Disable();
-        }
-
-        // Save before leaving the current scene.
-        if (GameStateSaveSystem.Instance)
-        {
-            GameStateSaveSystem.Instance.SaveGameState();
         }
         StartCoroutine(TransitionCoroutine(sceneName));
     }

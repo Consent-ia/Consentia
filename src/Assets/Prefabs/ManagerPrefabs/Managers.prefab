@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7350211071804218920}
   - component: {fileID: 4587616168068490911}
   - component: {fileID: 5537773328015159153}
+  - component: {fileID: 6052565144915663641}
   m_Layer: 0
   m_Name: GameSaveState
   m_TagString: Untagged
@@ -58,7 +59,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699589073b5746f880e7224271962f86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SaveSlotMenuController
-  startingSceneName: Act1
+--- !u!114 &6052565144915663641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 386644235327479819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f2ac07013c50b846bf1fa6382e3dfc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChangeScene
 --- !u!1 &836069361434883758
 GameObject:
   m_ObjectHideFlags: 0

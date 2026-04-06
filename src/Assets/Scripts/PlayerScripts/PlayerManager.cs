@@ -1,9 +1,16 @@
+using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PlayerManager : MonoBehaviour
 {
     private static PlayerManager Instance { get; set; }
+
+    private static readonly string[] GameplayScenes = { "Act1", "Act2", "Act3", "Act4" };
+
+    // Static cache so load can request a position even before PlayerManager exists.
+    private static bool s_hasPendingLoadedPosition;
+    private static Vector3 s_pendingLoadedPosition;
 
     [Header("Player Characters")]
     [SerializeField]
@@ -25,12 +32,33 @@ public class PlayerManager : MonoBehaviour
 
     private GameObject currentPlayer;
 
+    // If a load system wants to place the player at a specific position, it can
+    // request a one-time override for the next sceneLoaded.
+    private bool hasPendingLoadedPosition;
+    private Vector3 pendingLoadedPosition;
+
+    public static void SetNextLoadedPlayerPosition(Vector3 position)
+    {
+        // Cache statically so this works even if PlayerManager hasn't Awoken yet.
+        s_hasPendingLoadedPosition = true;
+        s_pendingLoadedPosition = position;
+
+        if (!Instance) return;
+        Instance.hasPendingLoadedPosition = true;
+        Instance.pendingLoadedPosition = position;
+    }
+
     private void Awake()
     {
         // Singleton pattern
         if (!Instance)
         {
             Instance = this;
+
+            // Pull any pending loaded position requested before Awake.
+            if (!s_hasPendingLoadedPosition) return;
+            hasPendingLoadedPosition = true;
+            pendingLoadedPosition = s_pendingLoadedPosition;
         }
         else
         {
@@ -38,9 +66,20 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
-    private void SpawnPlayer()
+    private void SpawnPlayer(string sceneName)
     {
-        currentPlayer = Instantiate(characters[PlayerPrefs.GetInt("SpawnInd")], position, Quaternion.identity);
+        Vector2 newPosition;
+        if (hasPendingLoadedPosition)
+        {
+            hasPendingLoadedPosition = false;
+            s_hasPendingLoadedPosition = false;
+            newPosition = pendingLoadedPosition;
+        }
+        else
+        {
+            newPosition = SetNewPosition(sceneName);
+        }
+        currentPlayer = Instantiate(characters[PlayerPrefs.GetInt("SpawnInd")], newPosition, Quaternion.identity);
         SetupNPCPlayerReferences();
         DontDestroyOnLoad(currentPlayer);
     }
@@ -50,15 +89,35 @@ public class PlayerManager : MonoBehaviour
     
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        if (!currentPlayer && scene.name == "Act1")
-        {
-            SpawnPlayer();
+        // Ensure the player exists in every gameplay scene (not only Act1).
+        if (!currentPlayer && IsGameplayScene(scene.name))
+            SpawnPlayer(scene.name);
+
+        // Keep ProgressManager hooked up whenever a player exists.
+        if (currentPlayer && ProgressManager.Instance)
             ProgressManager.Instance.Initialise(currentPlayer);
-        }
-        SetPlayerPosition(scene.name);
+        
+        // Only apply default act spawn positions for normal transitions between acts.
+        // If the player doesn't exist (e.g. IntroAct), do nothing.
+        if (currentPlayer)
+            SetPlayerPosition(scene.name);
+    }
+
+    private static bool IsGameplayScene(string sceneName)
+    {
+        return GameplayScenes.Any(t => t == sceneName);
     }
 
     private void SetPlayerPosition(string nextSceneName)
+    {
+        Vector2 newPosition = SetNewPosition(nextSceneName);
+
+        if (!currentPlayer) return;
+        currentPlayer.transform.position = newPosition;
+        SetupNPCPlayerReferences();
+    }
+
+    private Vector2 SetNewPosition(string nextSceneName)
     {
         Vector2 newPosition = nextSceneName switch
         {
@@ -68,10 +127,7 @@ public class PlayerManager : MonoBehaviour
             "Act4" => act4PlayerPosition,
             _ => position
         };
-
-        if (!currentPlayer) return;
-        currentPlayer.transform.position = newPosition;
-        SetupNPCPlayerReferences();
+        return newPosition;
     }
 
     private void SetupNPCPlayerReferences()

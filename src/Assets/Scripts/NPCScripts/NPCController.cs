@@ -14,10 +14,25 @@ public class NPCController : MonoBehaviour, INPC
     private bool hasInteracted;
     [SerializeField]
     private bool isQuestionNPC;
+    
+    private Transform exclamationTransform;
 
     private void Start()
     {
         animator = GetComponent<Animator>();
+        exclamationTransform = transform.Find("Exclamation");
+
+        // Initial sync based on current ProgressManager state (if any).
+        SyncFromProgressManager();
+    }
+
+    public void SyncFromProgressManager()
+    {
+        // NPCController also keeps its own hasInteracted flag, so we must sync it.
+        if (!ProgressManager.Instance || !npcDialog) return;
+        var interacted = ProgressManager.Instance.GetInteractedNpcNames();
+        hasInteracted = interacted != null && interacted.Contains(npcDialog.NPCName);
+        UpdateExclamationState(!hasInteracted);
     }
 
     public void Interact()
@@ -35,11 +50,14 @@ public class NPCController : MonoBehaviour, INPC
             hasInteracted = true;
         }
 
-        GameObject exclamation = transform.Find("Exclamation").gameObject;
-        if (exclamation)
-        {
-            exclamation.SetActive(false);
-        }
+        UpdateExclamationState(false);
+    }
+
+    private void UpdateExclamationState(bool npcState)
+    {
+        // Exclamation is optional.
+        if (!exclamationTransform) return;
+        exclamationTransform.gameObject.SetActive(npcState);
     }
 
     private void FacePlayer()

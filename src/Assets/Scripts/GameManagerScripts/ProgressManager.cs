@@ -115,8 +115,6 @@ public class ProgressManager : MonoBehaviour
         if (!camPortal) return;
         camPortal.SetActive(false);
     }
-    
-
 
     private void Update()
     {
@@ -183,18 +181,13 @@ public class ProgressManager : MonoBehaviour
 
     public void AddNpc(string npcName)
     {
+        if (npcName == "Arc Reactor") return;
         if (!interactedNPCs.Add(npcName))
         {
             Debug.Log($"Already interacted with {npcName}. Ignoring duplicate interaction.");
             return;
         }
         Debug.Log($"Interacted with {interactedNPCs.Count} NPCs in {currentAct}");
-
-        // Optional: autosave on meaningful progress.
-        if (GameStateSaveSystem.Instance)
-        {
-            GameStateSaveSystem.Instance.SaveGameState();
-        }
     }
 
     /// <summary>

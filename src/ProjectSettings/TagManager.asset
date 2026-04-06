@@ -9,8 +9,7 @@ TagManager:
   - EA
   - Portal
   - CamPortal
-  - NewGame
-  - LoadGame
+  - LandingScreen
   layers:
   - Default
   - TransparentFX
