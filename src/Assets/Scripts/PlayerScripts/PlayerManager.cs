@@ -38,11 +38,6 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
-    private void Start()
-    {
-        SpawnPlayer();
-    }
-
     private void SpawnPlayer()
     {
         currentPlayer = Instantiate(characters[PlayerPrefs.GetInt("SpawnInd")], position, Quaternion.identity);
@@ -55,6 +50,11 @@ public class PlayerManager : MonoBehaviour
     
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        if (!currentPlayer && scene.name == "Act1")
+        {
+            SpawnPlayer();
+            ProgressManager.Instance.Initialise(currentPlayer);
+        }
         SetPlayerPosition(scene.name);
     }
 

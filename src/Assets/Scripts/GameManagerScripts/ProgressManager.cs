@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -7,6 +8,7 @@ using UnityEngine.SceneManagement;
 
 public class ProgressManager : MonoBehaviour
 {
+    private static readonly int Activate = Animator.StringToHash(portalTriggerName);
     public static ProgressManager Instance { get; private set; }
 
     private int npcsCurrentAct;
@@ -16,7 +18,6 @@ public class ProgressManager : MonoBehaviour
     private GameObject exclamationArcReactor;
     private GameObject portal;
     
-    private GameObject player;
     private PlayerInput playerInput;
 
     [Header("Cutscene Timings")]
@@ -26,11 +27,11 @@ public class ProgressManager : MonoBehaviour
     [SerializeField] private float waitAfterActivateSeconds = 1.0f;
 
     private Animator portalAnimator;
-    private readonly string portalTriggerName = "Activate";
-    
+    private const string portalTriggerName = "Activate";
+
     // Cinemachine cameras
     private CinemachineCamera camPlayer;
-    private CinemachineCamera camPortal;
+    private GameObject camPortal;
     
     private bool cutsceneRunning;
     
@@ -63,11 +64,29 @@ public class ProgressManager : MonoBehaviour
         DeactivatePortalCamera();
     }
 
-    private void Start()
+    public void Initialise(GameObject player)
     {
-        player = GameObject.FindGameObjectWithTag("Player");
+        if (!player) return;
         playerInput = player.GetComponent<PlayerInput>();
         camPlayer = player.GetComponentInChildren<CinemachineCamera>();
+    }
+
+    private void SetPlayerControlEnabled(bool isEnabled)
+    {
+        // Also disable the Input System source.
+        if (!playerInput) return;
+        if (isEnabled)
+        {
+            if (playerInput.actions)
+                playerInput.actions.Enable();
+            playerInput.ActivateInput();
+        }
+        else
+        {
+            playerInput.DeactivateInput();
+            if (playerInput.actions)
+                playerInput.actions.Disable();
+        }
     }
 
     private void DeactivateExclamationArcReactor()
@@ -85,25 +104,23 @@ public class ProgressManager : MonoBehaviour
     private void DeactivatePortal()
     {
         portal = GameObject.FindGameObjectWithTag("Portal");
+        if (!portal) return;
         portalAnimator = portal.GetComponent<Animator>();
-        if (portal)
-        {
-            portal.SetActive(false);
-        }
+        portal.SetActive(false);
     }
     
     private void DeactivatePortalCamera()
     {
-        camPortal = GameObject.FindGameObjectWithTag("CamPortal").GetComponent<CinemachineCamera>();
-        if (camPortal)
-        {
-            camPortal.enabled = false;
-        }
+        camPortal = GameObject.FindGameObjectWithTag("CamPortal");
+        if (!camPortal) return;
+        camPortal.SetActive(false);
     }
+    
+
 
     private void Update()
     {
-        if (isActCompleted || interactedNPCs.Count != npcsCurrentAct)
+        if (isActCompleted || interactedNPCs.Count != npcsCurrentAct || currentAct == "IntroAct")
             return;
         
         isActCompleted = true;
@@ -121,6 +138,8 @@ public class ProgressManager : MonoBehaviour
     {
         if (cutsceneRunning)
             return;
+
+        SetPlayerControlEnabled(false);
         
         StartCoroutine(PanCutsceneCoroutine());
     }
@@ -130,12 +149,10 @@ public class ProgressManager : MonoBehaviour
         cutsceneRunning = true;
         
         // Disable player input during cutscene
-        if (playerInput)
-            playerInput.enabled = false;
         
         // 2) Switch to portal camera
         camPlayer.enabled = false;
-        camPortal.enabled = true;
+        camPortal.SetActive(true);
         
         // 3) Wait for blend to finish (roughly equals blend time)
         yield return new WaitForSeconds(panToPortalSeconds);
@@ -147,20 +164,19 @@ public class ProgressManager : MonoBehaviour
 
         // 4) Trigger animation
         if (portalAnimator && !string.IsNullOrEmpty(portalTriggerName))
-            portalAnimator.SetTrigger(portalTriggerName);
+            portalAnimator.SetTrigger(Activate);
 
         // Wait for animation (either fixed seconds, or better: Animation Event / StateMachineBehaviour)
         yield return new WaitForSeconds(waitAfterActivateSeconds);
 
         // 5) Pan back to player: restore player camera priority
         camPlayer.enabled = true;
-        camPortal.enabled = false;
+        camPortal.SetActive(false);
         
         yield return new WaitForSeconds(panBackSeconds);
 
         // 6) Re-enable input only after everything is done
-        if (playerInput) 
-            playerInput.enabled = true;
+        SetPlayerControlEnabled(true);
 
         cutsceneRunning = false;
     }
@@ -173,5 +189,32 @@ public class ProgressManager : MonoBehaviour
             return;
         }
         Debug.Log($"Interacted with {interactedNPCs.Count} NPCs in {currentAct}");
+
+        // Optional: autosave on meaningful progress.
+        if (GameStateSaveSystem.Instance)
+        {
+            GameStateSaveSystem.Instance.SaveGameState();
+        }
+    }
+
+    /// <summary>
+    /// Returns a copy of interacted NPC names for saving.
+    /// </summary>
+    public List<string> GetInteractedNpcNames()
+    {
+        return new List<string>(interactedNPCs);
+    }
+
+    /// <summary>
+    /// Restores interacted NPC names from save.
+    /// </summary>
+    public void SetInteractedNpcNames(List<string> npcNames)
+    {
+        interactedNPCs.Clear();
+        if (npcNames == null) return;
+        foreach (var npcName in npcNames.Where(npcName => !string.IsNullOrEmpty(npcName)))
+        {
+            interactedNPCs.Add(npcName);
+        }
     }
 }

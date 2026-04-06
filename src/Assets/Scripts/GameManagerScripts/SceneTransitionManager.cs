@@ -22,6 +22,10 @@ public class SceneTransitionManager : MonoBehaviour
 
     private GameObject player;
     private PlayerInput playerInput;
+    
+    // IntroAct Buttons
+    private GameObject newGame;
+    private GameObject loadGame;
 
     private void Awake()
     {
@@ -49,19 +53,41 @@ public class SceneTransitionManager : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        if (scene.name != "IntroAct") DeactivateIntroButtons();
+
         player = GameObject.FindGameObjectWithTag("Player");
         playerInput = player ? player.GetComponent<PlayerInput>() : null;
-        if (playerInput)
-        {
-            playerInput.enabled = true;
-        }
+        // NOTE:
+        // Do NOT force-enable input on every scene load.
+        // In builds, initialization order can differ vs Editor, and this can
+        // accidentally override cutscene/dialog/input-lock systems that intentionally
+        // disabled input (eg. when interacting with ArcReactor).
+        // Input should be enabled/disabled only by the system that owns the current game state.
+    }
+    
+    private void DeactivateIntroButtons()
+    {
+        newGame = GameObject.FindGameObjectWithTag("NewGame");
+        loadGame = GameObject.FindGameObjectWithTag("LoadGame");
+        if (newGame) newGame.SetActive(false);
+        if (loadGame) loadGame.SetActive(false);
     }
 
     public void TransitionToScene(string sceneName)
     {
         if (playerInput)
         {
-            playerInput.enabled = false;
+            // Prefer disabling input via the Input System API instead of disabling the component.
+            // This is more robust across platforms/builds.
+            playerInput.DeactivateInput();
+            if (playerInput.actions)
+                playerInput.actions.Disable();
+        }
+
+        // Save before leaving the current scene.
+        if (GameStateSaveSystem.Instance)
+        {
+            GameStateSaveSystem.Instance.SaveGameState();
         }
         StartCoroutine(TransitionCoroutine(sceneName));
     }
@@ -92,6 +118,12 @@ public class SceneTransitionManager : MonoBehaviour
 
         // Fade in
         yield return StartCoroutine(FadeIn());
+
+        // Re-enable input after the transition has visually completed.
+        if (!playerInput) yield break;
+        if (playerInput.actions)
+            playerInput.actions.Enable();
+        playerInput.ActivateInput();
     }
 
     private IEnumerator FadeOut()

@@ -8,6 +8,7 @@ public class SaveSystem : MonoBehaviour
     
     private string saveFilePath;
     private PlayerChoicesSaveData saveData;
+    private string currentSlotId;
     
     private void Awake()
     {
@@ -19,12 +20,40 @@ public class SaveSystem : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        
-        // Set save file path
-        saveFilePath = Path.Combine(Application.persistentDataPath, "playerChoices.json");
-        
+
+        // Load last used slot (optional). If none exists, we'll fall back to a default single-file save.
+        currentSlotId = PlayerPrefs.GetString("CurrentSlotId", "");
+        UpdateSaveFilePath();
+
         // Load existing data or create new
         LoadData();
+    }
+
+    /// <summary>
+    /// Sets the active save slot for dialog choices.
+    /// Call this when starting a New Game slot or before loading a slot.
+    /// </summary>
+    public void SetCurrentSlot(string slotId)
+    {
+        currentSlotId = slotId;
+        PlayerPrefs.SetString("CurrentSlotId", currentSlotId);
+        PlayerPrefs.Save();
+
+        UpdateSaveFilePath();
+        LoadData();
+    }
+
+    public string CreateNewSlotId()
+    {
+        return System.DateTime.UtcNow.ToString("yyyyMMdd_HHmmss");
+    }
+
+    private void UpdateSaveFilePath()
+    {
+        // Backwards compatibility: if no slot is chosen, use the old single file.
+        saveFilePath = string.IsNullOrEmpty(currentSlotId)
+            ? Path.Combine(Application.persistentDataPath, "playerChoices.json")
+            : Path.Combine(Application.persistentDataPath, $"playerChoices_{currentSlotId}.json");
     }
     
     public void SaveChoice(string npcName, string questionText, string selectedChoice, int choiceIndex)
