@@ -208,6 +208,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Exclamation
       objectReference: {fileID: 0}
+    - target: {fileID: 5376838632561225413, guid: 9670a9fc904adc944b9592388cd4dc55, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5376838632561225413, guid: 9670a9fc904adc944b9592388cd4dc55, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1424857707
+      objectReference: {fileID: 0}
     - target: {fileID: 7805699761056761525, guid: 9670a9fc904adc944b9592388cd4dc55, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
