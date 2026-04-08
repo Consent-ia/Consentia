@@ -101,4 +101,4 @@ InitTestScene*.unity*
 **/UpgradeLog.htm
 **/.idea/
 **/.vsconfig
-**/.src.sln**
+**/src.sln**
