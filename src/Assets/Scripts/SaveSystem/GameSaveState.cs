@@ -46,7 +46,7 @@ public class GameSaveState : MonoBehaviour
     }
 
     // ---------- Save ----------
-    private static void SaveGameState()
+    public static void SaveGameState()
     {
         var data = CaptureState();
         WriteToDisk(GetSavePath(), data);
@@ -169,11 +169,5 @@ public class GameSaveState : MonoBehaviour
         var npcs = FindObjectsByType<NPCController>(FindObjectsSortMode.None);
         foreach (var npc in npcs)
             npc.SyncFromProgressManager();
-    }
-
-    // ---------- Autosave hooks ----------
-    private void OnApplicationQuit()
-    {
-        SaveGameState();
     }
 }

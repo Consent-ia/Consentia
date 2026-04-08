@@ -7,6 +7,10 @@ public class MenuManager : MonoBehaviour
     [Header("Menu Object")]
     [SerializeField]
     private GameObject mainMenu;
+    
+    [Header("Landing Screen Settings Object")]
+    [SerializeField]
+    private GameObject landingScreenSettings;
 
     private void Awake()
     {
@@ -50,6 +54,7 @@ public class MenuManager : MonoBehaviour
 
     public void ExitGame()
     {
+        GameSaveState.SaveGameState();
         Application.Quit();
     }
 
@@ -57,5 +62,15 @@ public class MenuManager : MonoBehaviour
     {
         SaveSlotMenuController.Instance.NewGame();
         CloseMenu();
+    }
+
+    public void LandingExit()
+    {
+        Application.Quit();
+    }
+
+    public void ToggleLandingSettings()
+    {
+        landingScreenSettings.SetActive(!landingScreenSettings.activeSelf);
     }
 }

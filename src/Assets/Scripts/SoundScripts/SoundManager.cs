@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class SoundManager : MonoBehaviour
@@ -17,21 +18,32 @@ public class SoundManager : MonoBehaviour
     [SerializeField]
     private AudioSource sfxSource;
 
-    [Header("UI Sliders")]
+    [Header("Menu UI Sliders")]
     [SerializeField]
-    private Slider musicSlider;
+    private Slider menuMusicSlider;
 
     [SerializeField]
+    private Slider menuSfxSlider;    
+    
+    [Header("Landing Screen UI Sliders")]
+    [SerializeField]
+    private Slider landingMusicSlider;
+
+    [SerializeField]
+    private Slider landingSfxSlider;
+    
+    [Header("Slider Settings")]
+    private Slider musicSlider;
     private Slider sfxSlider;
 
     [Header("Volume Settings")]
     [SerializeField]
     [Range(0f, 1f)]
-    private float defaultMusicVolume = 0.7f;
+    private float defaultMusicVolume = 0.2f;
 
     [SerializeField]
     [Range(0f, 1f)]
-    private float defaultSFXVolume = 0.8f;
+    private float defaultSFXVolume = 0.1f;
 
     // PlayerPrefs keys
     private const string MUSIC_VOLUME_KEY = "MusicVolume";
@@ -53,22 +65,26 @@ public class SoundManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    
+    private void OnEnable()  => SceneManager.sceneLoaded += OnSceneLoaded;
+    private void OnDisable() => SceneManager.sceneLoaded -= OnSceneLoaded;
 
-    private void Start()
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        // Load saved volumes or use defaults
+        if (scene.name != "IntroAct")
+        {
+            musicSlider = menuMusicSlider;
+            sfxSlider = menuSfxSlider;
+        }
+        else
+        {
+            musicSlider = landingMusicSlider;
+            sfxSlider = landingSfxSlider;
+        }
+        
         LoadVolumeSettings();
-
-        // Setup slider listeners
-        if (musicSlider)
-        {
-            musicSlider.onValueChanged.AddListener(SetMusicVolume);
-        }
-
-        if (sfxSlider)
-        {
-            sfxSlider.onValueChanged.AddListener(SetSFXVolume);
-        }
+        musicSlider.onValueChanged.AddListener(SetMusicVolume);
+        sfxSlider.onValueChanged.AddListener(SetSFXVolume);
     }
 
     private void LoadVolumeSettings()

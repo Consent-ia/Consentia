@@ -467,8 +467,8 @@ MonoBehaviour:
   sfxSource: {fileID: 8179961966955483722}
   musicSlider: {fileID: 0}
   sfxSlider: {fileID: 0}
-  defaultMusicVolume: 0.7
-  defaultSFXVolume: 0.8
+  defaultMusicVolume: 0.2
+  defaultSFXVolume: 0.1
 --- !u!1 &3012504369287173042
 GameObject:
   m_ObjectHideFlags: 0

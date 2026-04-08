@@ -52,7 +52,7 @@ public class SceneTransitionManager : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        if (scene.name != "IntroAct") DeactivateIntroButtons();
+        if (scene.name != "IntroAct") DeactivateLandingScreen();
 
         player = GameObject.FindGameObjectWithTag("Player");
         playerInput = player ? player.GetComponent<PlayerInput>() : null;
@@ -60,11 +60,11 @@ public class SceneTransitionManager : MonoBehaviour
         // Do NOT force-enable input on every scene load.
         // In builds, initialization order can differ vs Editor, and this can
         // accidentally override cutscene/dialog/input-lock systems that intentionally
-        // disabled input (eg. when interacting with ArcReactor).
+        // disabled input (e.g. when interacting with ArcReactor).
         // Input should be enabled/disabled only by the system that owns the current game state.
     }
     
-    private void DeactivateIntroButtons()
+    private void DeactivateLandingScreen()
     {
         landingScreen = GameObject.FindGameObjectWithTag("LandingScreen");
         if (landingScreen) landingScreen.SetActive(false);
