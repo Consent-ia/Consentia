@@ -82,9 +82,26 @@ public class SoundManager : MonoBehaviour
             sfxSlider = landingSfxSlider;
         }
         
+        // LoadVolumeSettings();
+        // musicSlider.onValueChanged.AddListener(SetMusicVolume);
+        // sfxSlider.onValueChanged.AddListener(SetSFXVolume);
+    }
+    
+    private void Start()
+    {
+        // Load saved volumes or use defaults
         LoadVolumeSettings();
-        musicSlider.onValueChanged.AddListener(SetMusicVolume);
-        sfxSlider.onValueChanged.AddListener(SetSFXVolume);
+
+        // Setup slider listeners
+        if (musicSlider)
+        {
+            musicSlider.onValueChanged.AddListener(SetMusicVolume);
+        }
+
+        if (sfxSlider)
+        {
+            sfxSlider.onValueChanged.AddListener(SetSFXVolume);
+        }
     }
 
     private void LoadVolumeSettings()

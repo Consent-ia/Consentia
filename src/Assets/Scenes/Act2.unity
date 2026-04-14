@@ -824,6 +824,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5450927268544947158, guid: ebfc891b9c5b9a3468aff4e19b663560, type: 3}
   m_PrefabInstance: {fileID: 1274869324}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1314852310 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5389441395319942761, guid: eb91be039d08eb148b151f5b9d4a87d7, type: 3}
+  m_PrefabInstance: {fileID: 1459737765}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1459737765
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1293,6 +1298,10 @@ PrefabInstance:
       propertyPath: mainMenu
       value: 
       objectReference: {fileID: 1459737784}
+    - target: {fileID: 805642719666131987, guid: db97d2db83742a2478c41f0e2301fe89, type: 3}
+      propertyPath: landingScreenSettings
+      value: 
+      objectReference: {fileID: 1314852310}
     - target: {fileID: 1639671420634632998, guid: db97d2db83742a2478c41f0e2301fe89, type: 3}
       propertyPath: 'persistentObjects.Array.data[1]'
       value: 

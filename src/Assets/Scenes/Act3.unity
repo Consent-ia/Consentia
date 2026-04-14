@@ -974,6 +974,10 @@ PrefabInstance:
       propertyPath: mainMenu
       value: 
       objectReference: {fileID: 1459737784}
+    - target: {fileID: 805642719666131987, guid: db97d2db83742a2478c41f0e2301fe89, type: 3}
+      propertyPath: landingScreenSettings
+      value: 
+      objectReference: {fileID: 1948749287}
     - target: {fileID: 1639671420634632998, guid: db97d2db83742a2478c41f0e2301fe89, type: 3}
       propertyPath: 'persistentObjects.Array.data[1]'
       value: 
@@ -1202,6 +1206,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 5450927268544947158, guid: 3ccff26e4e412f94bb6c057d4145afda, type: 3}
   m_PrefabInstance: {fileID: 1606474308}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1948749287 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5389441395319942761, guid: eb91be039d08eb148b151f5b9d4a87d7, type: 3}
+  m_PrefabInstance: {fileID: 1459737765}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2038509378
 PrefabInstance:
