@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75e7bea227aaf2b499307efe1ddc0480, type: 3}
+  m_Name: ArcReactorDialog_Act5
+  m_EditorClassIdentifier: Assembly-CSharp::NPCDialog
+  NPCName: Arc Reactor
+  DialogLines:
+  - text: ...hummm...
+    isQuestion: 0
+    choices: []
+  - text: Chief recognised. Welcome back.
+    isQuestion: 0
+    choices: []
+  - text: All district connections restored.
+    isQuestion: 0
+    choices: []
+  - text: Memory lattice... intact.
+    isQuestion: 0
+    choices: []
+  - text: The town is configured. Your preferences are held.
+    isQuestion: 0
+    choices: []
+  - text: "...processing final record\u2026"
+    isQuestion: 0
+    choices: []
+  - text: This is what you chose. It is yours.
+    isQuestion: 0
+    choices: []

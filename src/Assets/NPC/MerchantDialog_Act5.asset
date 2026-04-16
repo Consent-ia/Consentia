@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75e7bea227aaf2b499307efe1ddc0480, type: 3}
+  m_Name: MerchantDialog_Act5
+  m_EditorClassIdentifier: Assembly-CSharp::NPCDialog
+  NPCName: Merchant
+  DialogLines:
+  - text: "Would you look at that\u2026"
+    isQuestion: 0
+    choices: []
+  - text: I've been standing next to this reactor for years. Never seen it glow like
+      that before.
+    isQuestion: 0
+    choices: []
+  - text: Thought the storm had done it in for good, honestly.
+    isQuestion: 0
+    choices: []
+  - text: "Whatever you settled out there in the districts\u2026 it seems the Core
+      agreed with it."
+    isQuestion: 0
+    choices: []
+  - text: Good work, Chief. Don't let anyone tell you otherwise.
+    isQuestion: 0
+    choices: []

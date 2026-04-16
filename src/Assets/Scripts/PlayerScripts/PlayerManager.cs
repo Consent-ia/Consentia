@@ -6,7 +6,7 @@ public class PlayerManager : MonoBehaviour
 {
     private static PlayerManager Instance { get; set; }
 
-    private static readonly string[] GameplayScenes = { "Act1", "Act2", "Act3", "Act4" };
+    private static readonly string[] GameplayScenes = { "Act1", "Act2", "Act3", "Act4", "Act5" };
 
     // Static cache so load can request a position even before PlayerManager exists.
     private static bool s_hasPendingLoadedPosition;
@@ -29,6 +29,8 @@ public class PlayerManager : MonoBehaviour
     private Vector2 act3PlayerPosition;
     [SerializeField]
     private Vector2 act4PlayerPosition;
+    [SerializeField]
+    private Vector2 act5PlayerPosition;
 
     private GameObject currentPlayer;
 
@@ -125,6 +127,7 @@ public class PlayerManager : MonoBehaviour
             "Act2" => act2PlayerPosition,
             "Act3" => act3PlayerPosition,
             "Act4" => act4PlayerPosition,
+            "Act5" => act5PlayerPosition,
             _ => position
         };
         return newPosition;
