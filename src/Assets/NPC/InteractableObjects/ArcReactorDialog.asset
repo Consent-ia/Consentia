@@ -29,7 +29,7 @@ MonoBehaviour:
   - text: The data storm fractured my memory lattice.
     isQuestion: 0
     choices: []
-  - text: Three critical shards were displaced across the network.
+  - text: My connections to the three districts have been severed.
     isQuestion: 0
     choices: []
   - text: "Without them\u2026 the city cannot restore itself."
@@ -41,10 +41,10 @@ MonoBehaviour:
   - text: A gateway channel is still operational.
     isQuestion: 0
     choices: []
-  - text: I will route you to the nearest corrupted sector.
+  - text: I will route you to the nearest disrupted district.
     isQuestion: 0
     choices: []
-  - text: "Recover the shard located there\u2026 and return it to me."
+  - text: "Speak with those who remain there\u2026 and restore what was lost."
     isQuestion: 0
     choices: []
   - text: Consentia depends on it.

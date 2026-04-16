@@ -17,38 +17,44 @@ MonoBehaviour:
   - text: "Careful\u2026 the containment lattice is barely holding!"
     isQuestion: 0
     choices: []
-  - text: When the data storm struck, the Core fractured into three primary shards.
+  - text: When the data storm struck, the Core's connection to the three districts
+      was severed.
     isQuestion: 0
     choices: []
-  - text: Each shard now holds a different layer of your identity.
+  - text: Each district manages a different layer of how this town serves its people.
     isQuestion: 0
     choices: []
-  - text: The reactor cannot repair itself until those fragments are recovered.
+  - text: The reactor cannot repair itself until those connections are re-established.
     isQuestion: 0
     choices: []
-  - text: The shards are scattered across three sectors of the city.
+  - text: The fracture... it has touched all three corners of the town.
     isQuestion: 0
     choices: []
-  - text: The West Sector holds the Archives.
+  - text: The Hearth District, where the town keeps its memories of each resident...
+      Its fires have gone cold since the storm.
     isQuestion: 0
     choices: []
-  - text: The East Sector contains the Systems District.
+  - text: The Undercroft. A place of quiet record-keeping beneath the streets. Now
+      dark, and disrupted.
     isQuestion: 0
     choices: []
-  - text: And the South Sector... it leads into the Deep Network.
+  - text: "And the Scarlet Exchange\u2026 the loudest district in the town. Now completely
+      silent."
     isQuestion: 0
     choices: []
   - text: The Core still remembers the paths to those places.
     isQuestion: 0
     choices: []
   - text: If you interact with the reactor, it will open a gateway to one of the
-      sectors.
+      districts.
     isQuestion: 0
     choices: []
-  - text: Travel through it, recover the shard, and return it here.
+  - text: Travel through it. Speak with our people over there, Chief. Your decisions
+      will shape what gets restored.
     isQuestion: 0
     choices: []
-  - text: With each fragment restored, the Core may begin rebuilding what was lost.
+  - text: With each district reconnected, the Core may begin rebuilding what was
+      lost.
     isQuestion: 0
     choices: []
   - text: "But something about the fracture pattern is wrong\u2026 reactors do not
@@ -58,7 +64,7 @@ MonoBehaviour:
   - text: It is almost as if the system rejected something.
     isQuestion: 0
     choices: []
-  - text: Go now. Use the Core to reach one of the sectors.
+  - text: Go now. Use the Core to reach one of the districts.
     isQuestion: 0
     choices: []
   - text: The Core will respond when you return.
