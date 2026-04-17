@@ -465,8 +465,10 @@ MonoBehaviour:
   audioMixer: {fileID: 24100000, guid: 2bf2aff24f53c5c42942b1a0aa237571, type: 2}
   musicSource: {fileID: 6773393939139559511}
   sfxSource: {fileID: 8179961966955483722}
-  musicSlider: {fileID: 0}
-  sfxSlider: {fileID: 0}
+  menuMusicSlider: {fileID: 0}
+  menuSfxSlider: {fileID: 0}
+  landingMusicSlider: {fileID: 0}
+  landingSfxSlider: {fileID: 0}
   defaultMusicVolume: 0.2
   defaultSFXVolume: 0.1
 --- !u!1 &3012504369287173042
@@ -520,6 +522,7 @@ MonoBehaviour:
   act2PlayerPosition: {x: -21, y: -8}
   act3PlayerPosition: {x: -23.5, y: 12.55}
   act4PlayerPosition: {x: 11.5, y: 0.2}
+  act5PlayerPosition: {x: -5, y: 11}
 --- !u!1 &4271052045573288025
 GameObject:
   m_ObjectHideFlags: 0
@@ -707,6 +710,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MenuManager
   mainMenu: {fileID: 0}
+  landingScreenSettings: {fileID: 0}
 --- !u!114 &7983483386182513735
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -91,7 +91,7 @@ public class ProgressManager : MonoBehaviour
 
     private void DeactivateExclamationArcReactor()
     {
-        if (currentAct != "Act1")
+        if (currentAct != "Act1" && currentAct != "Act5")
             return;
         
         exclamationArcReactor = GameObject.FindGameObjectWithTag("EA");
@@ -122,7 +122,7 @@ public class ProgressManager : MonoBehaviour
             return;
         
         isActCompleted = true;
-        if (currentAct == "Act1")
+        if (currentAct is "Act1" or "Act5")
         {
             exclamationArcReactor.SetActive(true);
         }

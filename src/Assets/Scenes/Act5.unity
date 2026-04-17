@@ -992,14 +992,6 @@ PrefabInstance:
       propertyPath: 'persistentObjects.Array.data[1]'
       value: 
       objectReference: {fileID: 1143193360}
-    - target: {fileID: 2597621941285600596, guid: db97d2db83742a2478c41f0e2301fe89, type: 3}
-      propertyPath: act5PlayerPosition.x
-      value: -5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2597621941285600596, guid: db97d2db83742a2478c41f0e2301fe89, type: 3}
-      propertyPath: act5PlayerPosition.y
-      value: 11
-      objectReference: {fileID: 0}
     - target: {fileID: 4349310902814377716, guid: db97d2db83742a2478c41f0e2301fe89, type: 3}
       propertyPath: m_Name
       value: Managers
@@ -1040,6 +1032,22 @@ PrefabInstance:
       propertyPath: musicSlider
       value: 
       objectReference: {fileID: 337984328}
+    - target: {fileID: 8548964467060376408, guid: db97d2db83742a2478c41f0e2301fe89, type: 3}
+      propertyPath: menuSfxSlider
+      value: 
+      objectReference: {fileID: 118789301}
+    - target: {fileID: 8548964467060376408, guid: db97d2db83742a2478c41f0e2301fe89, type: 3}
+      propertyPath: menuMusicSlider
+      value: 
+      objectReference: {fileID: 337984328}
+    - target: {fileID: 8548964467060376408, guid: db97d2db83742a2478c41f0e2301fe89, type: 3}
+      propertyPath: landingSfxSlider
+      value: 
+      objectReference: {fileID: 6577662652471402251}
+    - target: {fileID: 8548964467060376408, guid: db97d2db83742a2478c41f0e2301fe89, type: 3}
+      propertyPath: landingMusicSlider
+      value: 
+      objectReference: {fileID: 6577662652471402252}
     - target: {fileID: 8723217632541718375, guid: db97d2db83742a2478c41f0e2301fe89, type: 3}
       propertyPath: actImages.Array.data[0].actImage
       value: 
@@ -1556,6 +1564,28 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5389441395319942761, guid: eb91be039d08eb148b151f5b9d4a87d7, type: 3}
   m_PrefabInstance: {fileID: 6577662652471402248}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6577662652471402251 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3231999848273296727, guid: eb91be039d08eb148b151f5b9d4a87d7, type: 3}
+  m_PrefabInstance: {fileID: 6577662652471402248}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Slider
+--- !u!114 &6577662652471402252 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7630682726402131179, guid: eb91be039d08eb148b151f5b9d4a87d7, type: 3}
+  m_PrefabInstance: {fileID: 6577662652471402248}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Slider
 --- !u!1 &7742467082000939118 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3496655454095847583, guid: eb91be039d08eb148b151f5b9d4a87d7, type: 3}

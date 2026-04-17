@@ -1022,6 +1022,22 @@ PrefabInstance:
       propertyPath: musicSlider
       value: 
       objectReference: {fileID: 1459737768}
+    - target: {fileID: 8548964467060376408, guid: db97d2db83742a2478c41f0e2301fe89, type: 3}
+      propertyPath: menuSfxSlider
+      value: 
+      objectReference: {fileID: 1459737767}
+    - target: {fileID: 8548964467060376408, guid: db97d2db83742a2478c41f0e2301fe89, type: 3}
+      propertyPath: menuMusicSlider
+      value: 
+      objectReference: {fileID: 1459737768}
+    - target: {fileID: 8548964467060376408, guid: db97d2db83742a2478c41f0e2301fe89, type: 3}
+      propertyPath: landingSfxSlider
+      value: 
+      objectReference: {fileID: 1677269514}
+    - target: {fileID: 8548964467060376408, guid: db97d2db83742a2478c41f0e2301fe89, type: 3}
+      propertyPath: landingMusicSlider
+      value: 
+      objectReference: {fileID: 1677269515}
     - target: {fileID: 8876399897920180694, guid: db97d2db83742a2478c41f0e2301fe89, type: 3}
       propertyPath: choiceBox
       value: 
@@ -1145,6 +1161,28 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ccff26e4e412f94bb6c057d4145afda, type: 3}
+--- !u!114 &1677269514 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3231999848273296727, guid: eb91be039d08eb148b151f5b9d4a87d7, type: 3}
+  m_PrefabInstance: {fileID: 1459737765}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Slider
+--- !u!114 &1677269515 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7630682726402131179, guid: eb91be039d08eb148b151f5b9d4a87d7, type: 3}
+  m_PrefabInstance: {fileID: 1459737765}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Slider
 --- !u!1001 &1699083006
 PrefabInstance:
   m_ObjectHideFlags: 0

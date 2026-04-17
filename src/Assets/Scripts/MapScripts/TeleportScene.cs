@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Collider2D))]
 public class TeleportScene : MonoBehaviour, INPC
@@ -8,6 +9,8 @@ public class TeleportScene : MonoBehaviour, INPC
 
     private bool isWaitingForDialogEnd;
     private bool hasInteractedWithArc;
+    
+    private string sceneName;
 
     public void Interact()
     {
@@ -39,6 +42,15 @@ public class TeleportScene : MonoBehaviour, INPC
             return;
         
         isWaitingForDialogEnd = false;
-        ProgressManager.Instance.PanCameraToPortal();
+        sceneName = SceneManager.GetActiveScene().name;
+        switch (sceneName)
+        {
+            case "Act1":
+                ProgressManager.Instance.PanCameraToPortal();
+                break;
+            case "Act5":
+                Debug.Log(SaveSystem.Instance.GetLastChoicesSummaryStringForAllNPCs());
+                break;
+        }
     }
 }
