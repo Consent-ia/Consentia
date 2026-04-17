@@ -118,7 +118,7 @@ public class ProgressManager : MonoBehaviour
 
     private void Update()
     {
-        if (isActCompleted || interactedNPCs.Count != npcsCurrentAct || currentAct == "IntroAct")
+        if (isActCompleted || interactedNPCs.Count != npcsCurrentAct || currentAct == "IntroAct" || currentAct == "Act6")
             return;
         
         isActCompleted = true;

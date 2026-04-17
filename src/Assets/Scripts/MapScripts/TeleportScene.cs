@@ -49,7 +49,7 @@ public class TeleportScene : MonoBehaviour, INPC
                 ProgressManager.Instance.PanCameraToPortal();
                 break;
             case "Act5":
-                Debug.Log(SaveSystem.Instance.GetLastChoicesSummaryStringForAllNPCs());
+                ChangeScene.changeToScene("Act6");
                 break;
         }
     }
