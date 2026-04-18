@@ -49,7 +49,7 @@ public class TeleportScene : MonoBehaviour, INPC
                 ProgressManager.Instance.PanCameraToPortal();
                 break;
             case "Act5":
-                ChangeScene.changeToScene("Act6");
+                PrivacyProfileScreen.Instance.Show();
                 break;
         }
     }

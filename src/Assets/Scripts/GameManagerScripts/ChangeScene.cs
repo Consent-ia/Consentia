@@ -13,7 +13,6 @@ public class ChangeScene : MonoBehaviour
             "Act2" => "Act3",
             "Act3" => "Act4",
             "Act4" => "Act5",
-            "Act5" => "Act6",
             _ => currentScene
         };
         

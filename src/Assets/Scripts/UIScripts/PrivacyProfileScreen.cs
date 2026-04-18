@@ -3,6 +3,8 @@ using TMPro;
 
 public class PrivacyProfileScreen : MonoBehaviour
 {
+    public static PrivacyProfileScreen Instance { get; private set; }
+
     [System.Serializable]
     public struct PrivacyCategory
     {
@@ -12,6 +14,7 @@ public class PrivacyProfileScreen : MonoBehaviour
         [TextArea(2, 4)] public string enabledText;
         [TextArea(2, 4)] public string disabledText;
     }
+
 
     [Header("Icon Characters")]
     [SerializeField] private string tickCharacter = "✓";
@@ -56,14 +59,37 @@ public class PrivacyProfileScreen : MonoBehaviour
         disabledText = "Disabled. Your choices indicated you are not comfortable with cross-site tracking for commercial targeting purposes."
     };
 
-    private void Start()
+    private void Awake()
+    {
+        if (!Instance)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        Hide();
+    }
+
+    public void Show()
     {
         Refresh();
+        gameObject.SetActive(true);
     }
+
+    public void Hide()
+    {
+        gameObject.SetActive(false);
+    }
+
+    public bool IsVisible() => gameObject.activeSelf;
 
     public void Refresh()
     {
-        ApplyCategory(strictlyNecessaryCategory,    strictlyNecessary);
+        ApplyCategory(strictlyNecessaryCategory,     strictlyNecessary);
         ApplyCategory(functionalPreferencesCategory, functionalPreferences);
         ApplyCategory(analyticsPerformanceCategory,  analyticsPerformance);
         ApplyCategory(marketingAdvertisingCategory,  marketingAdvertising);

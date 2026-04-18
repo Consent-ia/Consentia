@@ -30,6 +30,13 @@ public class PlayerInteract : MonoBehaviour
         if (!context.performed) 
             return;
 
+        // If Privacy Profile is visible, dismiss it
+        if (PrivacyProfileScreen.Instance && PrivacyProfileScreen.Instance.IsVisible())
+        {
+            PrivacyProfileScreen.Instance.Hide();
+            return;
+        }
+
         // If waiting for choice selection, confirm the choice
         if (DialogManager.Instance && DialogManager.Instance.IsWaitingForChoice())
         {
