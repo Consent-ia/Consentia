@@ -1,3 +1,4 @@
+using System.Linq;
 using UnityEngine;
 using TMPro;
 
@@ -25,10 +26,10 @@ public class PrivacyProfileScreen : MonoBehaviour
     [SerializeField] private Color crossColor = new Color(0.85f, 0.3f, 0.3f);
 
     [Header("Category Toggles (set by save data later)")]
-    public bool strictlyNecessary = true;
-    public bool functionalPreferences = true;
-    public bool analyticsPerformance = false;
-    public bool marketingAdvertising = false;
+    private const bool strictlyNecessary = true;
+    private bool functionalPreferences = true;
+    private bool analyticsPerformance = true;
+    private bool marketingAdvertising = true;
 
     [Header("Categories")]
     [SerializeField] private PrivacyCategory strictlyNecessaryCategory = new PrivacyCategory
@@ -76,6 +77,7 @@ public class PrivacyProfileScreen : MonoBehaviour
 
     public void Show()
     {
+        SetupFromSaveData();
         Refresh();
         gameObject.SetActive(true);
     }
@@ -105,5 +107,31 @@ public class PrivacyProfileScreen : MonoBehaviour
 
         if (category.descriptionLabel)
             category.descriptionLabel.text = $"{category.categoryName}: {(value ? category.enabledText : category.disabledText)}";
+    }
+    
+    private void SetupFromSaveData()
+    {
+        if (!SaveSystem.Instance) return;
+
+        var result = SaveSystem.Instance.GetLastChoiceForAllNPCs();
+
+        foreach (var npcName in from pair in result let npcName = pair.Key let choice = pair.Value where choice.choiceIndex == 1 select npcName)
+        {
+            functionalPreferences = npcName switch
+            {
+                "Lexi" or "Nox" or "Carta" or "Ada" or "Curio" => false,
+                _ => functionalPreferences
+            };
+            analyticsPerformance = npcName switch
+            {
+                "Pulse" or "Aster" or "Brink" or "Quill" => false,
+                _ => analyticsPerformance
+            };
+            marketingAdvertising = npcName switch
+            {
+                "Ledger" or "Mirr" or "Trace" or "Velor" => false,
+                _ => marketingAdvertising
+            };
+        }
     }
 }
