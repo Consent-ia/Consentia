@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75e7bea227aaf2b499307efe1ddc0480, type: 3}
+  m_Name: MiraDialog_Act4
+  m_EditorClassIdentifier: Assembly-CSharp::NPCDialog
+  NPCName: Mira
+  DialogLines:
+  - text: The Scarlet Exchange.
+    isQuestion: 0
+    choices: []
+  - text: I will be honest with you, Chief.
+    isQuestion: 0
+    choices: []
+  - text: "Of all three districts\u2026 this is the one I found hardest to explain."
+    isQuestion: 0
+    choices: []
+  - text: The merchants here do not deal in goods. Not exactly.
+    isQuestion: 0
+    choices: []
+  - text: They deal in reach. In knowing where visitors go after they leave our town.
+    isQuestion: 0
+    choices: []
+  - text: "And in finding them again, elsewhere, with an offer they may not have asked for."
+    isQuestion: 0
+    choices: []
+  - text: Some see it as connection. Others as an intrusion they never agreed to.
+    isQuestion: 0
+    choices: []
+  - text: The choice here carries more weight than the others.
+    isQuestion: 0
+    choices: []
+  - text: Speak with each of them. Understand what they are asking from you.
+    isQuestion: 0
+    choices: []
+  - text: "I will be here, Chief. Whatever you decide."
+    isQuestion: 0
+    choices: []

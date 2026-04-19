@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75e7bea227aaf2b499307efe1ddc0480, type: 3}
+  m_Name: MiraDialog_Act2
+  m_EditorClassIdentifier: Assembly-CSharp::NPCDialog
+  NPCName: Mira
+  DialogLines:
+  - text: The teleporter worked. Good.
+    isQuestion: 0
+    choices: []
+  - text: Welcome to the Hearth District, Chief.
+    isQuestion: 0
+    choices: []
+  - text: It used to smell like warm bread and lamp oil from here.
+    isQuestion: 0
+    choices: []
+  - text: "The people in this quarter keep the town\u2019s memory of its visitors."
+    isQuestion: 0
+    choices: []
+  - text: Their language. Their preferences. The things they left half-finished.
+    isQuestion: 0
+    choices: []
+  - text: "Small things. But without them\u2026 a visitor walks in and the town treats them like a stranger every time."
+    isQuestion: 0
+    choices: []
+  - text: The storm took all of that from them.
+    isQuestion: 0
+    choices: []
+  - text: Find the residents, Chief. Each one manages a service that keeps those memories alive.
+    isQuestion: 0
+    choices: []
+  - text: Hear what they do. Then decide how the town should treat its visitors.
+    isQuestion: 0
+    choices: []
+  - text: It is a question of welcome. Of how much this town should remember.
+    isQuestion: 0
+    choices: []

@@ -80,11 +80,13 @@ public class PrivacyProfileScreen : MonoBehaviour
         SetupFromSaveData();
         Refresh();
         gameObject.SetActive(true);
+        Time.timeScale = 0f;
     }
 
     public void Hide()
     {
         gameObject.SetActive(false);
+        Time.timeScale = 1f;
     }
 
     public bool IsVisible() => gameObject.activeSelf;
